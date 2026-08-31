@@ -4,13 +4,6 @@ import { getLocale, setRequestLocale } from "next-intl/server";
 import { locales } from "@/i18n/locale";
 import { cn } from "@/lib/utils";
 import Script from "next/script";
-import { Inter } from "next/font/google";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
 
 export default async function RootLayout({
   children,
@@ -20,7 +13,7 @@ export default async function RootLayout({
   const locale = await getLocale();
   setRequestLocale(locale);
 
-  const webUrl = process.env.NEXT_PUBLIC_WEB_URL || "";
+  const webUrl = process.env.NEXT_PUBLIC_WEB_URL || "https://annorasky.com";
   const googleAdsenseCode = process.env.NEXT_PUBLIC_GOOGLE_ADCODE || "";
   const googleAnalyticsId = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || "";
 
@@ -43,8 +36,6 @@ export default async function RootLayout({
           </>
         )}
 
-        <link rel="icon" href="/logo.ico" />
-
         {locales &&
           locales.map((loc) => (
             <link
@@ -56,13 +47,13 @@ export default async function RootLayout({
           ))}
         <link rel="alternate" hrefLang="x-default" href={webUrl} />
       </head>
-      <body className={cn("min-h-screen overflow-x-hidden", inter.variable)}>
+      <body className={cn("min-h-screen overflow-x-hidden")}>
         {children}
         <Script id="enforce-external-nofollow" strategy="afterInteractive">
           {`
             (function(){
               try{
-                var allowNoFollowHosts = ['startupfa.me'];
+                var allowNoFollowHosts = [];
                 var anchors = document.querySelectorAll('a[href^="http"], a[target="_blank"]');
                 anchors.forEach(function(a){
                   var isExternal = a.host && a.host !== window.location.host;

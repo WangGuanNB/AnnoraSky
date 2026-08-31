@@ -1,97 +1,84 @@
-"use client";
+import { Quote, Star } from "lucide-react";
 
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel";
-
-import AutoScroll from "embla-carousel-auto-scroll";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import Icon from "@/components/icon";
-import { Section as SectionType } from "@/types/blocks/section";
-import { Star } from "lucide-react";
-import { useRef } from "react";
+import type { Section as SectionType } from "@/types/blocks/section";
 
 export default function Testimonial({ section }: { section: SectionType }) {
-  if (section.disabled) {
-    return null;
-  }
+  if (section.disabled) return null;
 
-  const plugin = useRef(
-    AutoScroll({
-      startDelay: 500,
-      speed: 0.7,
-    })
-  );
+  const isPreview = section.name === "testimonial-preview";
 
   return (
-    <section id={section.name} className="py-12 md:py-20">
-      <div className="flex flex-col items-center gap-4">
-        {section.label && (
-          <div className="flex items-center gap-1 text-sm font-semibold text-primary">
-            {section.icon && (
-              <Icon name={section.icon} className="h-6 w-auto border-primary" />
-            )}
-            {section.label}
+    <section id={section.name} className="border-y border-border/55 bg-card/55 py-12 md:py-20">
+      <div className="container">
+        <div className="mx-auto max-w-4xl text-center">
+          {section.label && (
+            <Badge variant="outline" className="mb-5">
+              {section.label}
+            </Badge>
+          )}
+          <h2 className="text-balance font-serif text-4xl font-semibold tracking-[-0.035em] lg:text-5xl">
+            {section.title}
+          </h2>
+          {section.description && (
+            <p className="mx-auto mt-5 max-w-3xl leading-7 text-muted-foreground lg:text-lg">
+              {section.description}
+            </p>
+          )}
+        </div>
+
+        {isPreview && (
+          <div className="mx-auto mt-7 max-w-3xl rounded-xl border border-[#d8c6b9] bg-[#f7ede5] px-4 py-3 text-center text-xs leading-5 text-[#765848]">
+            Preview only: these are sample personas and draft quotes for layout review. Replace them with verified user feedback before publishing.
           </div>
         )}
-        <h2 className="text-balance text-4xl font-medium lg:text-5xl">
-          {section.title}
-        </h2>
-        <p className="mx-auto max-w-3xl text-muted-foreground lg:text-lg">
-          {section.description}
-        </p>
-      </div>
-      <div className="container">
-        <div className="mt-16 space-y-4">
-          <div className="relative -mx-4 px-4 before:absolute before:bottom-0 before:left-0 before:top-0 before:z-10 before:w-36 before:bg-gradient-to-r before:from-background before:to-transparent after:absolute after:bottom-0 after:right-0 after:top-0 after:z-10 after:w-36 after:bg-gradient-to-l after:from-background after:to-transparent">
-            <Carousel
-              opts={{
-                loop: true,
-              }}
-              plugins={[plugin.current]}
-              onMouseLeave={() => plugin.current.play()}
-              className="relative"
+
+        <div className="mx-auto mt-10 grid max-w-6xl gap-5 lg:grid-cols-3">
+          {section.items?.map((item, index) => (
+            <Card
+              key={`${item.title}-${index}`}
+              className="relative flex min-h-[280px] flex-col overflow-hidden rounded-[1.6rem] border-border/65 bg-[#fffdfb] p-6 shadow-[0_16px_45px_rgba(70,44,63,.07)]"
             >
-            <CarouselContent>
-              {section.items?.map((item, index) => (
-                <CarouselItem key={index} className="basis-auto">
-                  <Card className="max-w-96 h-[280px] flex flex-col select-none p-6">
-                    <div className="flex justify-between">
-                      <div className="mb-4 flex gap-4">
-                        <Avatar className="size-14 rounded-full ring-1 ring-input">
-                          <AvatarImage
-                            src={item.image?.src}
-                            alt={item.image?.alt || item.title}
-                          />
-                        </Avatar>
-                        <div>
-                          <p className="font-medium">{item.title}</p>
-                          <p className="text-sm text-muted-foreground">
-                            {item.label}
-                          </p>
-                        </div>
-                      </div>
-                      <div className="flex gap-1">
-                        {Array.from({ length: 5 }).map((_, i) => (
-                          <Star
-                            key={i}
-                            className="size-5 fill-amber-500 text-amber-500"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <q className="leading-7 text-muted-foreground line-clamp-4 flex-1">
-                      {item.description}
-                    </q>
-                  </Card>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-          </Carousel>
-          </div>
+              <Quote className="absolute right-5 top-5 size-8 text-primary/10" aria-hidden="true" />
+
+              <div className="flex items-center justify-between gap-4">
+                {isPreview ? (
+                  <Badge className="rounded-full bg-[#f2e8ed] text-[#6d465f] hover:bg-[#f2e8ed]">
+                    Draft quote
+                  </Badge>
+                ) : (
+                  <div className="flex gap-1" aria-label="5 out of 5 stars">
+                    {Array.from({ length: 5 }).map((_, starIndex) => (
+                      <Star
+                        key={starIndex}
+                        className="size-4 fill-[#b57a4c] text-[#b57a4c]"
+                        aria-hidden="true"
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              <q className="mt-6 flex-1 font-serif text-xl leading-8 text-[#3c3039]">
+                {item.description}
+              </q>
+
+              <div className="mt-7 flex items-center gap-3 border-t border-[#eadfe4] pt-5">
+                <Avatar className="size-10 border border-[#dfd2d8]">
+                  {item.image?.src && <AvatarImage src={item.image.src} alt={item.image.alt || ""} />}
+                  <AvatarFallback className="bg-[#5d3c55] font-serif text-sm text-white">
+                    {(item.title || "A").slice(0, 1)}
+                  </AvatarFallback>
+                </Avatar>
+                <div>
+                  <p className="text-sm font-semibold text-[#3e323b]">{item.title}</p>
+                  {item.label && <p className="text-xs text-[#857780]">{item.label}</p>}
+                </div>
+              </div>
+            </Card>
+          ))}
         </div>
       </div>
     </section>

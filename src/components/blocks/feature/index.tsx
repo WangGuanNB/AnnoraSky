@@ -108,7 +108,7 @@ export default function Feature({ section }: { section: SectionType }) {
               {section.label}
             </Badge>
           )}
-          <h2 className="text-balance text-4xl font-medium lg:text-5xl">
+          <h2 className="text-balance font-serif text-4xl font-semibold tracking-[-0.035em] lg:text-5xl">
             {section.title}
           </h2>
           {section.description && (
@@ -135,18 +135,20 @@ export default function Feature({ section }: { section: SectionType }) {
                 custom={i}
                 variants={cardVariants}
                 style={{ willChange: "transform, opacity" }}
-                className="space-y-3 rounded-2xl border bg-card/30 p-8 text-center shadow-sm backdrop-blur-sm"
+                className="group space-y-4 rounded-2xl border border-border/60 bg-card/75 p-7 text-left shadow-sm backdrop-blur-sm transition hover:-translate-y-1 hover:border-primary/30 hover:shadow-[0_18px_45px_rgba(70,44,63,0.1)]"
               >
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-center gap-3">
+                  <span className="grid size-10 place-items-center rounded-xl bg-primary/10 transition group-hover:bg-primary/15">
                   {LucideIcon ? (
                     <LucideIcon className="size-4 text-primary" />
                   ) : item.icon ? (
                     <Icon name={item.icon} className="size-4 text-primary" />
                   ) : null}
-                  <h3 className="text-sm font-medium">{item.title}</h3>
+                  </span>
+                  <h3 className="font-serif text-lg font-semibold text-foreground">{item.title}</h3>
                 </div>
                 {item.description && (
-                  <p className="text-sm text-muted-foreground">
+                  <p className="text-sm leading-6 text-muted-foreground">
                     {item.description}
                   </p>
                 )}

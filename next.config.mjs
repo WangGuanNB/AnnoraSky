@@ -18,7 +18,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   // ❌ 已移除 output: "standalone" - Cloudflare Workers 不需要此配置
   reactStrictMode: false,
-  trailingSlash: true, // 确保URL都带尾部斜杠，与canonical保持一致
+  trailingSlash: false,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   images: {
     remotePatterns: [

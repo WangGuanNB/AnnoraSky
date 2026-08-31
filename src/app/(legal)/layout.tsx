@@ -25,9 +25,6 @@ export default function LegalLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="_foundr" content="539df62d0587613b924ddd39ae276749" />
-      </head>
       <body>
         <div>
           <a

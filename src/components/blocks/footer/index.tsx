@@ -7,7 +7,7 @@ export default function Footer({ footer }: { footer: FooterType }) {
   }
 
   return (
-    <section id={footer.name} className="py-16">
+    <section id={footer.name} className="border-t border-[#dfd3d9] bg-[#f4ecef] py-16">
       <div className="max-w-7xl mx-auto px-8">
         <footer>
           <div className="flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:text-left">
@@ -19,17 +19,17 @@ export default function Footer({ footer }: { footer: FooterType }) {
                       <img
                         src={footer.brand.logo.src}
                         alt={footer.brand.logo.alt || footer.brand.title}
-                        className="h-11"
+                        className="h-10"
                       />
                     )}
                     {footer.brand.title && (
-                      <p className="text-3xl font-semibold">
+                      <p className="font-serif text-3xl font-semibold tracking-[-0.03em]">
                         {footer.brand.title}
                       </p>
                     )}
                   </div>
                   {footer.brand.description && (
-                    <p className="mt-6 text-md text-muted-foreground">
+                    <p className="mt-6 text-base leading-7 text-muted-foreground">
                       {footer.brand.description}
                     </p>
                   )}

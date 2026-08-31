@@ -12,6 +12,8 @@ export interface LandingPage {
   benefit?: Section;
   usage?: Section;
   feature?: Section;
+  transits?: Section;
+  methodology?: Section;
   showcase?: Section;
   stats?: Section;
   pricing?: Pricing;

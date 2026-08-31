@@ -7,7 +7,7 @@ import { Header as HeaderType } from "@/types/blocks/header";
 import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
 import LocaleToggle from "@/components/locale/toggle";
-import { Menu, X } from "lucide-react";
+import { ChevronDown, Menu, Sparkles, X } from "lucide-react";
 import SignToggle from "@/components/sign/toggle";
 import ThemeToggle from "@/components/theme/toggle";
 import { cn } from "@/lib/utils";
@@ -51,15 +51,19 @@ export default function Header({ header }: { header: HeaderType }) {
                 aria-label="home"
                 onClick={() => setMenuState(false)}
               >
-                {header.brand?.logo?.src && (
+                {header.brand?.logo?.src ? (
                   <img
                     src={header.brand.logo.src}
                     alt={header.brand.logo.alt || header.brand.title}
-                    className="w-6"
+                    className="w-8"
                   />
+                ) : (
+                  <span className="grid size-9 place-items-center rounded-full border border-[#bca5b3] bg-[#5d3c55] text-white shadow-sm">
+                    <Sparkles className="size-4" aria-hidden="true" />
+                  </span>
                 )}
                 {header.brand?.title && (
-                  <span className="text-lg font-semibold text-foreground">
+                  <span className="font-serif text-xl font-semibold tracking-[-0.02em] text-foreground">
                     {header.brand?.title || ""}
                   </span>
                 )}
@@ -75,24 +79,87 @@ export default function Header({ header }: { header: HeaderType }) {
               </button>
               {/* 桌面端导航菜单 - 靠左，紧跟在 Logo 后面 */}
               <div className="hidden lg:block">
-                <ul className="flex gap-8 text-sm">
-                  {header.nav?.items?.map((item, i) => (
-                    <li key={i}>
-                      <Link
-                        href={item.url as any}
-                        target={item.target}
-                        className="text-foreground/80 hover:text-foreground font-medium block duration-150 transition-colors"
-                      >
-                        {item.icon && (
-                          <Icon
-                            name={item.icon}
-                            className="size-3 shrink-0 mr-2 inline"
-                          />
+                <ul className="flex items-center gap-1 text-sm">
+                  {header.nav?.items?.map((item, i) => {
+                    const hasChildren = Boolean(item.children?.length);
+
+                    return (
+                      <li key={`${item.title}-${i}`} className="group/nav relative">
+                        {hasChildren ? (
+                          <>
+                            <button
+                              type="button"
+                              aria-haspopup="menu"
+                              className="flex items-center gap-1.5 rounded-lg px-3 py-2 font-medium text-foreground/80 transition-colors hover:bg-[#f4ecef] hover:text-foreground focus-visible:bg-[#f4ecef] focus-visible:text-foreground focus-visible:outline-none"
+                            >
+                              <span>{item.title}</span>
+                              <ChevronDown
+                                className="size-3.5 transition-transform duration-200 group-hover/nav:rotate-180 group-focus-within/nav:rotate-180"
+                                aria-hidden="true"
+                              />
+                            </button>
+
+                            <div className="invisible absolute left-1/2 top-full z-40 w-[34rem] -translate-x-1/2 pt-3 opacity-0 transition duration-150 group-hover/nav:visible group-hover/nav:opacity-100 group-focus-within/nav:visible group-focus-within/nav:opacity-100">
+                              <div
+                                role="menu"
+                                aria-label={item.title}
+                                className="grid grid-cols-2 gap-1 rounded-2xl border border-annora-border bg-white/95 p-3 shadow-[0_22px_60px_rgba(66,44,59,0.16)] backdrop-blur-xl"
+                              >
+                                {item.children?.map((child, childIndex) => {
+                                  const itemContent = (
+                                    <>
+                                      <span className="block font-semibold text-annora-heading">
+                                        {child.title}
+                                      </span>
+                                      {child.description && (
+                                        <span className="mt-1 block text-xs font-normal leading-5 text-annora-muted">
+                                          {child.description}
+                                        </span>
+                                      )}
+                                    </>
+                                  );
+
+                                  return child.url ? (
+                                    <Link
+                                      key={`${child.title}-${childIndex}`}
+                                      href={child.url as any}
+                                      target={child.target}
+                                      role="menuitem"
+                                      className="rounded-xl px-4 py-3 transition-colors hover:bg-[#f6eef2] focus-visible:bg-[#f6eef2] focus-visible:outline-none"
+                                    >
+                                      {itemContent}
+                                    </Link>
+                                  ) : (
+                                    <div
+                                      key={`${child.title}-${childIndex}`}
+                                      role="menuitem"
+                                      aria-disabled="true"
+                                      tabIndex={0}
+                                      className="cursor-default rounded-xl px-4 py-3 focus-visible:bg-[#f6eef2] focus-visible:outline-none"
+                                    >
+                                      {itemContent}
+                                    </div>
+                                  );
+                                })}
+                              </div>
+                            </div>
+                          </>
+                        ) : item.url ? (
+                          <Link
+                            href={item.url as any}
+                            target={item.target}
+                            className="block rounded-lg px-3 py-2 font-medium text-foreground/80 transition-colors hover:bg-[#f4ecef] hover:text-foreground"
+                          >
+                            {item.title}
+                          </Link>
+                        ) : (
+                          <span className="block cursor-default rounded-lg px-3 py-2 font-medium text-foreground/70">
+                            {item.title}
+                          </span>
                         )}
-                        <span>{item.title}</span>
-                      </Link>
-                    </li>
-                  ))}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
@@ -125,25 +192,76 @@ export default function Header({ header }: { header: HeaderType }) {
           <div className="bg-background group-data-[state=active]:block mb-6 hidden w-full rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 dark:shadow-none">
             {/* 上半部分：导航菜单 */}
             <div className="w-full pb-4">
-              <ul className="space-y-4">
-                {header.nav?.items?.map((item, i) => (
-                  <li key={i}>
-                    <Link
-                      href={item.url as any}
-                      target={item.target}
-                      className="text-foreground/90 hover:text-foreground block py-2 text-base font-medium transition-colors duration-150"
-                      onClick={() => setMenuState(false)}
-                    >
-                      {item.icon && (
-                        <Icon
-                          name={item.icon}
-                          className="size-4 shrink-0 mr-3 inline"
-                        />
+              <ul className="space-y-2">
+                {header.nav?.items?.map((item, i) => {
+                  const hasChildren = Boolean(item.children?.length);
+
+                  return (
+                    <li key={`${item.title}-${i}`}>
+                      {hasChildren ? (
+                        <details className="group/mobile-nav rounded-2xl border border-annora-border/70 bg-white/55 px-4">
+                          <summary className="flex cursor-pointer list-none items-center justify-between py-3 text-base font-semibold text-foreground marker:content-none">
+                            <span>{item.title}</span>
+                            <ChevronDown
+                              className="size-4 transition-transform group-open/mobile-nav:rotate-180"
+                              aria-hidden="true"
+                            />
+                          </summary>
+                          <div className="space-y-1 border-t border-annora-border/60 py-2">
+                            {item.children?.map((child, childIndex) =>
+                              child.url ? (
+                                <Link
+                                  key={`${child.title}-${childIndex}`}
+                                  href={child.url as any}
+                                  target={child.target}
+                                  className="block rounded-xl px-3 py-2.5 transition-colors hover:bg-[#f6eef2]"
+                                  onClick={() => setMenuState(false)}
+                                >
+                                  <span className="block text-sm font-semibold text-annora-heading">
+                                    {child.title}
+                                  </span>
+                                  {child.description && (
+                                    <span className="mt-1 block text-xs leading-5 text-annora-muted">
+                                      {child.description}
+                                    </span>
+                                  )}
+                                </Link>
+                              ) : (
+                                <div
+                                  key={`${child.title}-${childIndex}`}
+                                  aria-disabled="true"
+                                  className="cursor-default rounded-xl px-3 py-2.5"
+                                >
+                                  <span className="block text-sm font-semibold text-annora-heading">
+                                    {child.title}
+                                  </span>
+                                  {child.description && (
+                                    <span className="mt-1 block text-xs leading-5 text-annora-muted">
+                                      {child.description}
+                                    </span>
+                                  )}
+                                </div>
+                              ),
+                            )}
+                          </div>
+                        </details>
+                      ) : item.url ? (
+                        <Link
+                          href={item.url as any}
+                          target={item.target}
+                          className="block py-2 text-base font-medium text-foreground/90 transition-colors hover:text-foreground"
+                          onClick={() => setMenuState(false)}
+                        >
+                          {item.title}
+                        </Link>
+                      ) : (
+                        <span className="block py-2 text-base font-medium text-foreground/70">
+                          {item.title}
+                        </span>
                       )}
-                      <span>{item.title}</span>
-                    </Link>
-                  </li>
-                ))}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 

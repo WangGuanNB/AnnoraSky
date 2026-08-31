@@ -10,7 +10,7 @@ export function cn(...inputs: ClassValue[]) {
  * 解决hardcode和双斜杠问题
  */
 export function getBaseUrl(): string {
-  const url = process.env.NEXT_PUBLIC_WEB_URL || 'http://localhost:3000';
+  const url = process.env.NEXT_PUBLIC_WEB_URL || 'https://annorasky.com';
   return url.replace(/\/$/, ''); // 去除末尾斜杠，防止生成 //
 }
 
@@ -23,10 +23,10 @@ export function getCanonicalUrl(locale: string, path: string = '/'): string {
   const cleanPath = path === '/' ? '' : path;
 
   if (locale === 'en') {
-    return `${baseUrl}${cleanPath}/`;
+    return cleanPath ? `${baseUrl}${cleanPath}` : `${baseUrl}/`;
   }
 
-  return `${baseUrl}/${locale}${cleanPath}/`;
+  return cleanPath ? `${baseUrl}/${locale}${cleanPath}` : `${baseUrl}/${locale}`;
 }
 
 // ========================================
@@ -39,10 +39,10 @@ export function getCanonicalUrl(locale: string, path: string = '/'): string {
  */
 export function getSocialMediaConfig() {
   return {
-    support_email: process.env.NEXT_PUBLIC_SUPPORT_EMAIL || 'support@shipfire.com',
-    twitter_url: process.env.NEXT_PUBLIC_TWITTER_URL || 'https://x.com/shipfire',
-    github_url: process.env.NEXT_PUBLIC_GITHUB_URL || 'https://github.com/shipfire', 
-    discord_url: process.env.NEXT_PUBLIC_DISCORD_URL || 'https://discord.gg/shipfire'
+    support_email: process.env.NEXT_PUBLIC_SUPPORT_EMAIL || 'support@annorasky.com',
+    twitter_url: process.env.NEXT_PUBLIC_TWITTER_URL || '',
+    github_url: process.env.NEXT_PUBLIC_GITHUB_URL || '',
+    discord_url: process.env.NEXT_PUBLIC_DISCORD_URL || ''
   };
 }
 

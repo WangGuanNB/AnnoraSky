@@ -7,6 +7,9 @@ import { Section as SectionType } from "@/types/blocks/section";
 import { Link } from "@/i18n/navigation";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import ProductPreview, {
+  getProductPreviewVariant,
+} from "@/components/annora-sky/product-preview";
 
 export default function FeatureWhatTwo({
   section,
@@ -21,7 +24,7 @@ export default function FeatureWhatTwo({
     <section id={section.name} className="py-12 md:py-20">
       <div className="container max-w-7xl">
         {/* 主内容区域 */}
-        <div className="rounded-3xl bg-card/30 p-8 shadow-sm backdrop-blur-sm lg:p-12">
+        <div className="rounded-3xl border border-border/55 bg-card/70 p-6 shadow-sm backdrop-blur-sm sm:p-8 lg:p-12">
           {/* 顶部标题区域 */}
           <header className="mx-auto mb-16 max-w-3xl text-center lg:mb-20">
             {section.label && (
@@ -30,7 +33,7 @@ export default function FeatureWhatTwo({
               </span>
             )}
             {section.title && (
-              <h2 className="mb-4 text-balance text-4xl font-medium lg:text-5xl">
+              <h2 className="mb-4 text-balance font-serif text-4xl font-semibold tracking-[-0.035em] lg:text-5xl">
                 {section.title}
               </h2>
             )}
@@ -42,9 +45,10 @@ export default function FeatureWhatTwo({
           </header>
 
           {/* 功能区块列表 */}
-          <div className="space-y-24 lg:space-y-32">
+          <div className="space-y-16 lg:space-y-24">
           {section.items?.map((item, index) => {
             const hasImage = Boolean(item.image?.src);
+            const productPreview = getProductPreviewVariant(item.image?.src);
             const isReversed = index % 2 === 1;
             const hasButtons = item.buttons && item.buttons.length > 0;
             
@@ -120,12 +124,22 @@ export default function FeatureWhatTwo({
                       isReversed && "lg:order-2"
                     )}
                   >
-                    <div className="relative aspect-[4/3] w-full h-full bg-muted">
-                      <img
-                        src={item.image?.src}
-                        alt={item.image?.alt || item.title}
-                        className="absolute inset-0 h-full w-full object-cover"
-                      />
+                    <div className="relative aspect-[4/3] h-full w-full overflow-hidden rounded-2xl bg-muted shadow-[0_20px_55px_rgba(70,44,63,0.12)]">
+                      {productPreview ? (
+                        <ProductPreview
+                          variant={productPreview}
+                          label={item.image?.alt || item.title || "Annora Sky product preview"}
+                        />
+                      ) : (
+                        <img
+                          src={item.image?.src}
+                          alt={item.image?.alt || item.title}
+                          className={cn(
+                            "absolute inset-0 h-full w-full object-cover transition duration-700 hover:scale-[1.02]",
+                            item.image?.className,
+                          )}
+                        />
+                      )}
                     </div>
                   </motion.div>
                 )}
@@ -159,7 +173,7 @@ export default function FeatureWhatTwo({
                     )}
 
                     {/* 标题 */}
-                    <h3 className="text-2xl font-bold leading-tight tracking-tight lg:text-3xl">
+                    <h3 className="font-serif text-2xl font-semibold leading-tight tracking-[-0.025em] lg:text-3xl">
                       {item.title}
                     </h3>
 
@@ -238,4 +252,3 @@ export default function FeatureWhatTwo({
     </section>
   );
 }
-

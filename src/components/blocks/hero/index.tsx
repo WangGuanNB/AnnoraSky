@@ -152,9 +152,24 @@ function ToolHero({
     : undefined;
 
   return (
-    <HeroBackdrop className="min-h-0 pt-20 pb-12 md:pt-28 md:pb-16" solidBackground>
-      <div className="container mx-auto max-w-3xl space-y-8 text-center">
-        <h1 className="hero-text-down text-balance text-3xl font-bold leading-tight text-foreground sm:text-4xl lg:text-5xl">
+    <HeroBackdrop
+      className="min-h-0 bg-[radial-gradient(circle_at_12%_18%,rgba(196,151,183,.22),transparent_28%),radial-gradient(circle_at_88%_22%,rgba(212,169,126,.2),transparent_26%)] pb-12 pt-20 md:pb-16 md:pt-28"
+      solidBackground
+      astrologyBackground
+    >
+      <div className="container mx-auto max-w-7xl space-y-6 text-center">
+        {hero.announcement && (
+          <div className="hero-text-down inline-flex items-center gap-2 rounded-full border border-[#d2c0cb] bg-white/75 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-annora-plum-muted shadow-sm backdrop-blur">
+            {hero.announcement.label && (
+              <span className="rounded-full bg-annora-plum px-2.5 py-1 text-[10px] text-white">
+                {hero.announcement.label}
+              </span>
+            )}
+            <span>{hero.announcement.title}</span>
+          </div>
+        )}
+
+        <h1 className="hero-text-down mx-auto max-w-4xl text-balance font-serif text-4xl font-semibold leading-[1.03] tracking-[-0.04em] text-foreground sm:text-5xl lg:text-7xl">
           {hero.title}
           {hero.highlight_text && (
             <>
@@ -167,8 +182,19 @@ function ToolHero({
         </h1>
 
         {plainDescription && (
-          <p className="hero-text-up mx-auto max-w-2xl text-base text-muted-foreground">
+          <p className="hero-text-up mx-auto max-w-3xl text-base leading-7 text-muted-foreground sm:text-lg">
             {plainDescription}
+          </p>
+        )}
+
+        {hero.metrics && hero.metrics.length > 0 && (
+          <p className="hero-text-up text-[11px] font-semibold uppercase tracking-[0.24em] text-annora-mauve sm:text-xs">
+            {hero.metrics.map((item, index) => (
+              <React.Fragment key={`${item}-${index}`}>
+                {index > 0 && <span className="px-2 text-[#c2abb8]">•</span>}
+                <span>{item}</span>
+              </React.Fragment>
+            ))}
           </p>
         )}
 
@@ -276,11 +302,14 @@ function HeroBackdrop({
   children,
   className,
   solidBackground = false,
+  astrologyBackground = false,
 }: {
   children: ReactNode;
   className?: string;
   /** When true, use solid background without RetroGrid pattern (e.g. for tool hero) */
   solidBackground?: boolean;
+  /** Adds Annora's soft orbital motif while keeping the tech grid disabled. */
+  astrologyBackground?: boolean;
 }) {
   return (
     <div
@@ -296,8 +325,14 @@ function HeroBackdrop({
         </div>
       )}
 
+      {astrologyBackground && (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 bg-[url('/imgs/masks/circle.svg')] bg-[length:820px_820px] bg-[position:center_34%] bg-no-repeat opacity-[0.22]"
+        />
+      )}
+
       <div className="relative z-10 w-full">{children}</div>
     </div>
   );
 }
-

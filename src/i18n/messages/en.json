@@ -1,8 +1,8 @@
 {
   "metadata": {
-    "title": "ShipStart - Build Your SaaS Website in 3 Minutes",
-    "description": "A free website builder designed for global indie developers. Launch your product in 48 hours with zero code and built-in AI optimization tools. ShipStart helps your product reach users worldwide instantly.",
-    "keywords": "ShipStart, SaaS website builder, website builder, indie developer tools, no-code website builder, AI website builder, global website builder, free website builder"
+    "title": "Free Astrology Birth Chart Calculator | Annora Sky",
+    "description": "Create a free Western astrology birth chart from your birth date, time, and place. Understand your Sun, Moon, Rising, houses, aspects, and current transits.",
+    "keywords": "birth chart calculator, free birth chart, natal chart, astrology chart, current transits, synastry chart"
   },
   "user": {
     "sign_in": "Sign In",
@@ -33,7 +33,7 @@
   },
   "my_orders": {
     "title": "My Orders",
-    "description": "Orders placed on ShipStart.",
+    "description": "Orders placed on Annora Sky.",
     "no_orders": "No orders found",
     "tip": "",
     "activate_order": "Activate Order",
@@ -85,9 +85,9 @@
     "no_posts": "No posts yet. Check back soon!",
     "read_more_text": "Read More",
     "tools_notice": {
-      "text": "Looking for hands-on tools? Beyond these tutorials, explore our complete suite of website building tools on our",
-      "link_text": "main ShipStart homepage",
-      "suffix": "for immediate website creation and advanced features."
+      "text": "Looking for hands-on astrology tools? Explore your personal chart on the",
+      "link_text": "Annora Sky homepage",
+      "suffix": "for birth-chart and transit features."
     }
   },
   "my_invites": {
@@ -98,7 +98,7 @@
     "edit_invite_link": "Edit Invite Link",
     "copy_invite_link": "Copy Invite Link",
     "invite_code": "Invite Code",
-    "invite_tip": "Invite 1 friend to use ShipStart, reward $50.",
+    "invite_tip": "Invite a friend to explore Annora Sky.",
     "invite_balance": "Invite Reward Balance",
     "total_invite_count": "Total Invite Count",
     "total_paid_count": "Total Paid Count",
@@ -106,7 +106,7 @@
     "update_invite_code": "Set Invite Code",
     "update_invite_code_tip": "Input your custom invite code",
     "update_invite_button": "Save",
-    "no_orders": "You can't invite others before you purchased ShipStart",
+    "no_orders": "Invites are not available for this account.",
     "no_affiliates": "You're not allowed to invite others, please contact us to apply for permission.",
     "table": {
       "invite_time": "Invite Time",
@@ -120,7 +120,7 @@
   },
   "feedback": {
     "title": "Feedback",
-    "description": "We'd love to hear what went well or how we can improve the ShipStart experience.",
+    "description": "We'd love to hear what went well or how we can improve Annora Sky.",
     "submit": "Submit",
     "loading": "Submitting...",
     "contact_tip": "Other ways to contact us",
@@ -129,7 +129,7 @@
   },
   "share": {
     "title": "Share this website",
-    "text": "Just created this website for FREE using ShipStart! Try it yourself:",
+    "text": "Explore your birth chart with Annora Sky:",
     "preparing": "Preparing for share...",
     "success": "Link copied to clipboard!",
     "failed": "Failed to copy link",
@@ -147,7 +147,7 @@
   },
   "websiteBuilder": {
     "ui": {
-      "title": "Build Your SaaS Website with ShipStart",
+      "title": "Explore Your Birth Chart with Annora Sky",
       "subtitle": "Launch your product in 48 hours with zero code"
     },
     "upload": {

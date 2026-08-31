@@ -35,7 +35,7 @@ export async function sendEmail({
       return;
     }
 
-    const fromEmail = from || process.env.RESEND_FROM_EMAIL || "noreply@shipfire.com";
+    const fromEmail = from || process.env.RESEND_FROM_EMAIL || "support@annorasky.com";
 
     const { data, error } = await resend.emails.send({
       from: fromEmail,
@@ -71,7 +71,7 @@ export async function sendOrderConfirmationEmail({
 }) {
   try {
     const supportEmail = getSocialMediaConfig().support_email;
-    const webUrl = process.env.NEXT_PUBLIC_WEB_URL || "https://shipfire.app";
+    const webUrl = process.env.NEXT_PUBLIC_WEB_URL || "https://annorasky.com";
 
     const amount = (order.amount / 100).toFixed(2);
     const currency = order.currency.toUpperCase();
@@ -139,7 +139,7 @@ export async function sendOrderConfirmationEmail({
     <h2 style="color: #2d3748; margin-top: 0;">What's Next?</h2>
     <p>${accessInfo}</p>
     <p style="margin-top: 15px;">
-      <a href="${webUrl}" style="background-color: #4a5568; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Open ShipFire</a>
+      <a href="${webUrl}" style="background-color: #5d3c55; color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 8px; display: inline-block;">Open Annora Sky</a>
     </p>
   </div>
 
@@ -150,7 +150,7 @@ export async function sendOrderConfirmationEmail({
 
   <div style="text-align: center; color: #718096; font-size: 12px; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
     <p>This is an automated email. Please do not reply to this message.</p>
-    <p>&copy; ${new Date().getFullYear()} ShipFire. All rights reserved.</p>
+    <p>&copy; ${new Date().getFullYear()} Annora Sky. All rights reserved.</p>
   </div>
 </body>
 </html>
@@ -233,7 +233,7 @@ export async function sendContactFormEmail({
       to: supportEmail,
       subject: `Contact Form: ${subject}`,
       html: html,
-      from: `Contact Form <${process.env.RESEND_FROM_EMAIL || "noreply@shipfire.com"}>`,
+      from: `Contact Form <${process.env.RESEND_FROM_EMAIL || "support@annorasky.com"}>`,
     });
 
     // 自动回复用户
@@ -260,7 +260,7 @@ export async function sendContactFormEmail({
 
   <div style="text-align: center; color: #718096; font-size: 12px; margin-top: 30px; padding-top: 20px; border-top: 1px solid #e2e8f0;">
     <p>This is an automated email. Please do not reply to this message.</p>
-    <p>&copy; ${new Date().getFullYear()} ShipFire. All rights reserved.</p>
+    <p>&copy; ${new Date().getFullYear()} Annora Sky. All rights reserved.</p>
   </div>
 </body>
 </html>
@@ -276,4 +276,3 @@ export async function sendContactFormEmail({
     throw e;
   }
 }
-

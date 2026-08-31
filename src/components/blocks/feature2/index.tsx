@@ -21,6 +21,9 @@ import Icon from "@/components/icon";
 import { Link } from "@/i18n/navigation";
 import { Section as SectionType } from "@/types/blocks/section";
 import { motion, useInView } from "framer-motion";
+import ProductPreview, {
+  getProductPreviewVariant,
+} from "@/components/annora-sky/product-preview";
 
 const DURATION = 5000;
 
@@ -108,7 +111,7 @@ export default function Feature2({ section }: { section: SectionType }) {
               {section.label}
             </Badge>
           )}
-          <h2 className="text-balance text-4xl font-medium lg:text-5xl">
+          <h2 className="text-balance font-serif text-4xl font-semibold tracking-[-0.035em] lg:text-5xl">
             {section.title}
           </h2>
           {section.description && (
@@ -142,9 +145,9 @@ export default function Feature2({ section }: { section: SectionType }) {
                 <AccordionItem
                   key={i}
                   value={(i + 1).toString()}
-                  className="rounded-xl bg-background/90 px-4"
+                  className="rounded-xl border border-border/55 bg-background/85 px-4 shadow-sm"
                 >
-                  <AccordionTrigger className="gap-4 py-4 text-left text-base font-semibold lg:text-lg">
+                  <AccordionTrigger className="gap-4 py-4 text-left font-serif text-base font-semibold lg:text-lg">
                     <div className="flex items-center gap-2">
                       {item.icon && (
                         <Icon
@@ -214,7 +217,7 @@ export default function Feature2({ section }: { section: SectionType }) {
             animate={rightInView ? "visible" : "hidden"}
             variants={slideRightVariants}
             style={{ willChange: "transform, opacity" }}
-            className="flex items-start rounded-3xl border border-border/60 bg-background/90 p-3 shadow-sm"
+            className="flex items-start rounded-3xl border border-border/60 bg-background/90 p-3 shadow-[0_20px_55px_rgba(70,44,63,0.1)]"
           >
             <Carousel
               opts={{
@@ -227,11 +230,18 @@ export default function Feature2({ section }: { section: SectionType }) {
                 {section.items?.map((item, i) => (
                   <CarouselItem key={i}>
                     <div className="h-full min-h-[320px] w-full overflow-hidden rounded-2xl lg:min-h-[420px]">
-                      <img
-                        src={item.image?.src}
-                        alt={item.image?.alt || item.title}
-                        className="h-full w-full object-cover"
-                      />
+                      {getProductPreviewVariant(item.image?.src) ? (
+                        <ProductPreview
+                          variant={getProductPreviewVariant(item.image?.src)!}
+                          label={item.image?.alt || item.title || "Annora Sky product preview"}
+                        />
+                      ) : (
+                        <img
+                          src={item.image?.src}
+                          alt={item.image?.alt || item.title}
+                          className={`h-full w-full object-cover ${item.image?.className || ""}`}
+                        />
+                      )}
                     </div>
                   </CarouselItem>
                 ))}

@@ -108,7 +108,7 @@ export async function createPayPalOrder(
             },
           ],
           application_context: {
-            brand_name: process.env.NEXT_PUBLIC_PROJECT_NAME || "ShipFire",
+            brand_name: process.env.NEXT_PUBLIC_PROJECT_NAME || "Annora Sky",
             landing_page: "BILLING",
             user_action: "PAY_NOW",
             return_url: params.success_url,

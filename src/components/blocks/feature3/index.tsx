@@ -55,7 +55,7 @@ const StepCard: React.FC<StepCardProps> = ({ icon, title, description, index }) 
         delay: index * 0.1,
       }}
       className={cn(
-        "relative rounded-2xl border bg-card p-6 text-card-foreground transition-all duration-300 ease-in-out",
+        "relative rounded-2xl border border-border/60 bg-card/80 p-6 text-card-foreground shadow-sm transition-all duration-300 ease-in-out",
         "hover:scale-105 hover:shadow-lg hover:border-primary/50 hover:bg-muted"
       )}
     >
@@ -67,8 +67,8 @@ const StepCard: React.FC<StepCardProps> = ({ icon, title, description, index }) 
       )}
 
       {/* Title and Description */}
-      {title && <h3 className="mb-2 text-base font-semibold lg:text-lg">{title}</h3>}
-      {description && <p className="text-muted-foreground lg:text-lg">{description}</p>}
+      {title && <h3 className="mb-2 font-serif text-lg font-semibold lg:text-xl">{title}</h3>}
+      {description && <p className="text-sm leading-6 text-muted-foreground lg:text-base">{description}</p>}
     </motion.div>
   );
 };
@@ -110,7 +110,7 @@ export default function Feature3({ section }: { section: SectionType }) {
               {section.label}
             </Badge>
           )}
-          <h2 className="text-balance text-4xl font-medium lg:text-5xl">
+          <h2 className="text-balance font-serif text-4xl font-semibold tracking-[-0.035em] lg:text-5xl">
             {section.title}
           </h2>
           {section.description && (

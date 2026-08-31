@@ -42,7 +42,7 @@ export async function POST(req: Request) {
           rating === 1 ? "Negative" : rating === 5 ? "Positive" : "Neutral";
 
         const projectName =
-          process.env.NEXT_PUBLIC_PROJECT_NAME || "ShipFire";
+          process.env.NEXT_PUBLIC_PROJECT_NAME || "Annora Sky";
         const messageWithProject = `${content}\n\n@By${projectName}`;
 
         await sendContactFormEmail({

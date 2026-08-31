@@ -1,565 +1,473 @@
 {
-  "template": "shipany-template-one",
+  "template": "annora-sky",
   "theme": "light",
   "header": {
-    "brand": {
-      "title": "ShipStart",
-      "logo": {
-        "src": "/logo.png",
-        "alt": "ShipFire"
-      },
-      "url": "/"
-    },
+    "brand": { "title": "Annora Sky", "url": "/" },
     "nav": {
       "items": [
         {
-          "title": "Home",
-          "url": "/",
-          "icon": "RiHomeLine"
+          "title": "Birth Chart",
+          "children": [
+            {
+              "title": "Birth Chart Calculator",
+              "description": "Create a complete natal chart from birth date, time, and place."
+            },
+            {
+              "title": "Big Three Calculator",
+              "description": "Find and understand your Sun, Moon, and Rising signs."
+            },
+            {
+              "title": "Moon Sign Calculator",
+              "description": "Explore emotional needs, instincts, and your inner rhythm."
+            },
+            {
+              "title": "Rising Sign Calculator",
+              "description": "Calculate your Ascendant from an exact birth time and place."
+            }
+          ]
         },
         {
-          "title": "Image Generator",
-          "url": "/image-generator",
-          "icon": "RiImageLine"
+          "title": "Transits",
+          "children": [
+            {
+              "title": "Current Transits",
+              "description": "See which moving planets are contacting your natal chart now."
+            },
+            {
+              "title": "Transit Calendar",
+              "description": "View important personal transit dates in one timeline."
+            },
+            {
+              "title": "7-Day Outlook",
+              "description": "Follow the closest personal transits for the week ahead."
+            },
+            {
+              "title": "30-Day Outlook",
+              "description": "Plan around longer patterns developing over the next month."
+            }
+          ]
         },
         {
-          "title": "Pricing",
-          "url": "/pricing",
-          "icon": "RiPriceTag3Line"
+          "title": "Compatibility",
+          "children": [
+            {
+              "title": "Synastry Chart Calculator",
+              "description": "Compare two birth charts and their cross-chart aspects."
+            },
+            {
+              "title": "Birth Chart Compatibility",
+              "description": "Understand how two people connect across key placements."
+            },
+            {
+              "title": "Relationship Reports",
+              "description": "Explore communication, attraction, support, and tension."
+            }
+          ]
         },
         {
-          "title": "Blog",
-          "url": "/blog",
-          "icon": "RiArticleLine"
+          "title": "Learn",
+          "children": [
+            {
+              "title": "Astrology Basics",
+              "description": "A beginner-friendly path through natal astrology."
+            },
+            {
+              "title": "Planets",
+              "description": "What each planet represents in a birth chart."
+            },
+            {
+              "title": "Zodiac Signs",
+              "description": "How the twelve signs shape planetary expression."
+            },
+            {
+              "title": "Houses",
+              "description": "The twelve life areas described by an astrology chart."
+            },
+            {
+              "title": "Aspects",
+              "description": "How planetary angles connect different chart themes."
+            },
+            {
+              "title": "Methodology",
+              "description": "How Annora Sky calculates and explains each result."
+            }
+          ]
         }
       ]
     },
     "buttons": [],
-    "show_sign": true,
-    "show_theme": true,
-    "show_locale": true
+    "show_sign": false,
+    "show_theme": false,
+    "show_locale": false
   },
   "hero": {
-    "title": "ShipStart: Build Your SaaS Website in 3 Minutes",
-    "highlight_text": "Lightning Fast",
-    "description": "A free website builder designed for global indie developers. Launch your product in 48 hours with zero code and built-in AI optimization tools.",
+    "name": "birth-chart",
+    "variant": "tool",
     "announcement": {
-      "label": "Limited Time",
-      "title": "Free Forever",
-      "url": "/#features"
+      "label": "ANNORA SKY",
+      "title": "YOUR CHART, IN MOTION"
     },
-    "images": [
-      {
-        "src": "/imgs/features/1.webp",
-        "alt": "ShipFire Website Builder Example 1",
-        "title": "Build Your SaaS Website"
-      },
-      {
-        "src": "/imgs/features/1.webp",
-        "alt": "ShipStart Website Templates Example 2",
-        "title": "50+ Professional Templates"
-      }
-    ],
-    "layout": "left-image-right-content",
-    "variant": "compact",
-    "enable_carousel": true,
-    "buttons": [
-      {
-        "title": "Build Saas Free Now",
-        "icon": "RiMagicLine",
-        "url": "/#generator",
-        "target": "_self",
-        "variant": "default"
-      },
-      {
-        "title": "Explore Features",
-        "url": "/#feature",
-        "target": "_self",
-        "variant": "secondary"
-      }
-    ],
-    "metrics": [
-      "FREE",
-      "Trusted by 50,000+ developers"
-    ],
-    "stats": [
-      {
-        "value": "50,000+",
-        "label": "Active Developers",
-        "icon": "RiUserLine"
-      },
-      {
-        "value": "200,000+",
-        "label": "Websites Built",
-        "icon": "RiImageLine"
-      }
-    ],
-    "show_happy_users": true,
-    "show_badge": true
-  },
-  "branding": {
-    "title": "Powered by cutting-edge AI technology",
-    "items": [
-      {
-        "title": "OpenAI",
-        "image": {
-          "src": "/imgs/logos/nextjs.svg",
-          "alt": "OpenAI"
-        }
-      },
-      {
-        "title": "Computer Vision",
-        "image": {
-          "src": "/imgs/logos/react.svg",
-          "alt": "Computer Vision"
-        }
-      },
-      {
-        "title": "Neural Networks",
-        "image": {
-          "src": "/imgs/logos/tailwindcss.svg",
-          "alt": "Neural Networks"
-        }
-      },
-      {
-        "title": "Machine Learning",
-        "image": {
-          "src": "/imgs/logos/shadcn.svg",
-          "alt": "Machine Learning"
-        }
-      },
-      {
-        "title": "Cloud Processing",
-        "image": {
-          "src": "/imgs/logos/vercel.svg",
-          "alt": "Cloud Processing"
-        }
-      }
-    ]
+    "title": "Free Birth Chart Calculator",
+    "description": "Create your natal chart from your birth date, time, and place. Start with your Sun, Moon, and Rising, then see how today's sky connects with your chart.",
+    "metrics": ["Western Tropical", "No signup", "Saved in this browser"]
   },
   "introduce": {
-    "name": "introduce",
-    "title": "What is ShipStart",
-    "label": "OVERVIEW",
-    "description": "A SaaS website-building platform tailored for global-facing developers to help your product reach users worldwide instantly.",
-    "image": {
-      "src": "/imgs/features/1.webp"
-    },
+    "name": "what-your-chart-reveals",
+    "label": "WHAT YOUR CHART REVEALS",
+    "title": "Your Birth Chart, Explained in Four Clear Layers",
+    "description": "Start with your Big Three, then explore planetary placements, houses, aspects, and current transits—without having to decode everything at once.",
     "items": [
       {
-        "title": "ShipStart Free Website Builder",
-        "description": "A completely free online building system—no coding required. It integrates key modules such as payment systems, user management, and analytics. The drag-and-drop interface lets you focus on your product while we handle the tech. Go live in just 3 minutes.",
-        "icon": "RiDownloadLine",
+        "label": "YOUR NATAL MAP",
+        "icon": "RiCompass3Line",
+        "title": "See the complete shape of your birth chart",
+        "description": "Your natal chart maps the Sun, Moon, planets, zodiac signs, angles, houses, and aspects for the exact sky at your birth. Annora Sky brings those pieces into one readable view.",
         "image": {
-          "src": "/imgs/features/1.webp",
-          "alt": "Core Resources Library"
+          "src": "annora-preview:chart",
+          "alt": "Annora Sky birth chart wheel with zodiac signs, planets, houses, and angles"
         },
         "buttons": [
           {
-            "title": "Start Creating",
-            "url": "/#generator",
-            "variant": "default"
-          },
+            "title": "Create My Free Chart",
+            "url": "/#birth-chart",
+            "icon": "RiArrowRightLine"
+          }
+        ]
+      },
+      {
+        "label": "START WITH THE ESSENTIALS",
+        "icon": "RiSunLine",
+        "title": "Understand your Sun, Moon, and Rising",
+        "description": "Your Big Three give you a practical starting point: identity and direction, emotional needs, and—when your birth time is known—how you meet the world.",
+        "image": {
+          "src": "annora-preview:big-three",
+          "alt": "Annora Sky Big Three result showing Sun, Moon, and Rising signs"
+        }
+      },
+      {
+        "label": "THE PATTERNS BETWEEN PLANETS",
+        "icon": "RiShareLine",
+        "title": "Explore houses, placements, and major aspects",
+        "description": "Open the technical details when you want them. See planetary signs and degrees, Whole Sign houses, and the strongest geometric relationships in your natal chart.",
+        "image": {
+          "src": "annora-preview:details",
+          "alt": "Annora Sky planetary placements, Whole Sign houses, and major aspects result"
+        }
+      },
+      {
+        "label": "YOUR CHART IN MOTION",
+        "icon": "RiSparklingLine",
+        "title": "Return as the current sky changes",
+        "description": "Your natal chart stays the same, but current transits keep moving. Reopen a saved chart to see which planetary contacts are closest now.",
+        "image": {
+          "src": "annora-preview:transits",
+          "alt": "Annora Sky personal current transit timeline with active planetary contacts"
+        },
+        "buttons": [
           {
-            "title": "See Pricing",
-            "url": "/#pricing",
+            "title": "View Saved Charts",
+            "url": "/saved-charts",
             "variant": "outline"
           }
         ]
-      },
-      {
-        "title": "ShipStart AI Optimization Engine",
-        "description": "Built-in AI analyzes user behavior automatically. The AI assistant provides real-time improvement suggestions that boost conversions by up to 40%. From copywriting to layout tweaks, your site stays in peak marketing condition without hiring a team.",
-        "icon": "RiDownloadLine",
-        "image": {
-          "src": "/imgs/features/2.webp",
-          "alt": "ShipStart AI optimizing website performance"
-        },
-        "buttons": [
-          {
-            "title": "Start Creating",
-            "url": "/#generator",
-            "variant": "default"
-          },
-          {
-            "title": "View Pricing",
-            "url": "/#pricing",
-            "variant": "outline"
-          }
-        ]
-      },
-      {
-        "title": "ShipStart Online One-Click Deployment",
-        "description": "Cloud hosting ensures 99.9% uptime. Global CDN delivers fast access for users worldwide. Automatic SSL, domain binding, and SEO optimization are all included—zero technical barrier so founders can focus fully on their product.",
-        "icon": "RiDownloadLine",
-        "image": {
-          "src": "/imgs/features/3.webp",
-          "alt": "ShipStart deploying website to production"
-        },
-        "buttons": [
-          {
-            "title": "Start Creating",
-            "url": "/#generator",
-            "variant": "default"
-          },
-          {
-            "title": "See Pricing",
-            "url": "/#pricing",
-            "variant": "outline"
-          }
-        ]
-      },
-      {
-        "title": "ShipStart 50+ Professional Templates",
-        "description": "Choose from 50+ SaaS-optimized templates covering tools, services, communities, and more. Each is conversion-ready with drag-and-drop customization. Pick a template, add your content, and launch—no design skills required.",
-        "icon": "RiDownloadLine",
-        "image": {
-          "src": "/imgs/features/4.webp",
-          "alt": "ShipStart professional template library"
-        },
-        "buttons": [
-          {
-            "title": "Start Creating",
-            "url": "/#generator",
-            "variant": "default"
-          },
-          {
-            "title": "See Pricing",
-            "url": "/#pricing",
-            "variant": "outline"
-          }
-        ]
-      }
-    ]
-  },
-  "benefit": {
-    "name": "benefit",
-    "title": "Why Developers Choose ShipStart",
-    "label": "Core Benefits",
-    "description": "Zero-cost startup with professional-grade features so your SaaS wins from day one.",
-    "items": [
-      {
-        "title": "Truly Zero Cost",
-        "description": "ShipStart is 100% free with no hidden fees. Features that cost $49–299/month elsewhere—unlimited pages, user management, payment integration, analytics dashboards—are all unlocked here. Ideal for indie developers, saving thousands in early costs so you can invest in product and marketing instead.",
-        "icon": "RiStarLine",
-        "image": {
-          "src": "/imgs/features/4.webp",
-          "alt": "ShipStart free website builder interface"
-        },
-        "buttons": [
-          {
-            "title": "Create Free",
-            "url": "/#generator",
-            "variant": "default"
-          }
-          
-        ]
-      },
-      {
-        "title": "Lightning Fast",
-        "description": "From creating an account to publishing your website takes only 3 minutes. Choose from 50+ templates optimized for SaaS, customize, and publish. Compared to the 2–4 weeks required for traditional development, ShipStart helps you enter the market a month earlier. Automated workflows handle updates and backups so you can focus on growth.",
-        "icon": "RiGiftLine",
-        "image": {
-          "src": "/imgs/features/1.webp",
-          "alt": "ShipStart lightning fast deployment"
-        },
-        "buttons": [
-          {
-            "title": "Create Free",
-            "url": "/#generator",
-            "variant": "default"
-          }
-        ]
-      },
-      {
-        "title": "Optimized for Global Expansion",
-        "description": "Deeply understands the needs of global-facing developers. Supports 20+ languages with auto-translation, multi-currency payments, and GDPR-compliant data handling. Integrated Google Analytics and Meta Pixel help you track overseas performance. With servers across 15 regions, users in the US and Europe experience near-local speeds.",
-        "icon": "RiSpeedLine",
-        "image": {
-          "src": "/imgs/features/3.webp",
-          "alt": "ShipStart global expansion features"
-        },
-        "buttons": [
-          {
-            "title": "Create Free",
-            "url": "/#generator",
-            "variant": "default"
-          }
-        ]
-      }
-    ]
-  },
-  "usage": {
-    "name": "usage",
-    "label": "HOW TO USE",
-    "title": "How to Build a ShipStart Website",
-    "description": "Create a professional website in three steps—fully online in just 180 seconds.",
-    "items": [
-      {
-        "title": "Select Template",
-        "description": "Browse 50+ carefully crafted SaaS templates covering tools, services, communities, and more. Each is optimized for conversions—just pick and start customizing.",
-        "icon": "RiEditLine"
-      },
-      {
-        "title": "Customize Your Content",
-        "description": "Use the ShipStart Online Editor to modify text, images, and colors. The AI assistant suggests copy and layout based on your product type. Preview changes instantly.",
-        "icon": "RiPaletteLine"
-      },
-      {
-        "title": "Publish with One Click",
-        "description": "Click Publish to automatically configure domain binding, SSL certificates, and CDN deployment. Your website goes live instantly and updates are equally effortless.",
-        "icon": "RiSettings3Line"
       }
     ]
   },
   "feature": {
-    "name": "feature",
-    "label": "FEATURES",
-    "title": "ShipStart Core Features Overview",
-    "description": "Enterprise-level capabilities made simple for indie developers, powering your product’s growth.",
+    "name": "features",
+    "label": "INSIDE YOUR FREE CHART",
+    "title": "A Complete Natal Chart, Organized for Beginners",
+    "description": "See the full calculation without being forced to understand every symbol and technical detail at once.",
     "items": [
       {
-        "title": "Visual Editor",
-        "description": "Drag-and-drop interface with real-time preview. A library of 50+ components allows you to create custom layouts without design skills.",
-        "icon": "RiEyeLine"
+        "icon": "RiLayoutLine",
+        "title": "Interactive Chart Wheel",
+        "description": "See signs, planets, angles, houses, and major aspects in one clear visual map."
       },
       {
-        "title": "User Authentication System",
-        "description": "Supports email, Google, GitHub, and more. Automatically manages permissions and subscription tiers. Built-in trial and upgrade flows boost retention by 35%.",
-        "icon": "RiHdLine"
+        "icon": "RiStarSLine",
+        "title": "Your Big Three First",
+        "description": "Begin with your Sun, Moon, and Rising before opening the deeper chart details."
       },
       {
-        "title": "Payment Integration",
-        "description": "Integrated with Stripe and PayPal. Handles subscription billing, invoices, refunds, and more—freeing you from backend complexity.",
-        "icon": "RiLayoutLine"
+        "icon": "RiCpuLine",
+        "title": "Planets and Houses",
+        "description": "Explore planetary signs, degrees, and the life areas emphasized by each placement."
       },
       {
-        "title": "Analytics Dashboard",
-        "description": "Track user behavior, funnels, and revenue trends in real time. Clear visual charts help you discover growth opportunities and boost ROI by up to 50%.",
-        "icon": "RiStarSLine"
+        "icon": "RiFingerprintLine",
+        "title": "Honest Unknown-Time Mode",
+        "description": "Still calculate useful placements while clearly hiding results that require an exact time."
       },
       {
-        "title": "Automatic SEO Optimization",
-        "description": "Generates titles, descriptions, and schema markup automatically. Auto-submits to search engines and optimizes loading speed for higher Google rankings.",
-        "icon": "RiCloudLine"
+        "icon": "RiShareLine",
+        "title": "Major Aspects",
+        "description": "Understand the strongest angular relationships between planets and the themes they connect."
       },
       {
-        "title": "Email Marketing Tools",
-        "description": "Built-in email sending for welcome messages, product updates, campaigns, and more. A/B testing helps you discover high-performing copy, increasing open rates by 45%.",
-        "icon": "RiShareLine"
+        "icon": "RiSparklingLine",
+        "title": "Personal Transit Highlights",
+        "description": "Compare today's sky with your natal chart and see which planetary contacts are closest now."
+      }
+    ]
+  },
+  "transits": {
+    "name": "current-transits",
+    "label": "YOUR CHART, IN MOTION",
+    "title": "The Sky Changes. Your Birth Chart Gives It Context.",
+    "description": "A natal chart describes the sky at your birth. Personal transits compare that chart with the planets moving now, giving you a useful reason to return beyond a one-time reading.",
+    "buttons": [
+      {
+        "title": "Create My Free Chart",
+        "url": "/#birth-chart"
+      },
+      {
+        "title": "View Saved Charts",
+        "url": "/saved-charts",
+        "variant": "outline"
+      }
+    ],
+    "items": [
+      {
+        "label": "STRONGEST NOW",
+        "icon": "RiSparklingLine",
+        "title": "Venus trine natal Moon",
+        "description": "A close example transit connecting relationship themes with emotional needs and everyday ease."
+      },
+      {
+        "label": "THIS WEEK",
+        "icon": "RiCalendarEventLine",
+        "title": "Mercury sextile natal Sun",
+        "description": "An example of how a short-lived transit can highlight communication, decisions, and self-expression."
+      },
+      {
+        "label": "COMING NEXT",
+        "icon": "RiArrowRightLine",
+        "title": "Mars enters your 10th house",
+        "description": "A house-level preview showing where the next planetary shift may focus attention and momentum."
+      }
+    ]
+  },
+  "benefit": {
+    "name": "core-benefits",
+    "label": "WHY ANNORA SKY",
+    "title": "Personal Astrology Without the Usual Overwhelm",
+    "description": "Annora Sky is designed to make a complete birth chart easier to understand, revisit, and use as a reflective tool.",
+    "items": [
+      {
+        "icon": "RiEyeLine",
+        "title": "Clarity Before Complexity",
+        "description": "Begin with the strongest themes in plain English. Degrees, houses, and aspect details remain available when you want to go deeper.",
+        "image": {
+          "src": "annora-preview:big-three",
+          "alt": "Plain-English Big Three explanations in the Annora Sky birth chart"
+        },
+        "buttons": [
+          {
+            "title": "Create Free Chart",
+            "url": "/#birth-chart"
+          }
+        ]
+      },
+      {
+        "icon": "RiCalendarEventLine",
+        "title": "Personal Transits, Not Generic Horoscopes",
+        "description": "Current transits compare today's planetary positions with your own natal chart, showing which connections are closest and may feel more active now.",
+        "image": {
+          "src": "annora-preview:transits",
+          "alt": "Personal transit highlights compared with an individual natal chart"
+        }
+      },
+      {
+        "icon": "RiLockLine",
+        "title": "Private and Easy to Revisit",
+        "description": "No account is required. Save useful charts in this browser, reopen them later, and refresh current transits without entering the details again.",
+        "image": {
+          "src": "annora-preview:saved",
+          "alt": "Birth charts saved privately in the user's browser"
+        },
+        "buttons": [
+          {
+            "title": "View Saved Charts",
+            "url": "/saved-charts",
+            "variant": "outline"
+          }
+        ]
+      }
+    ]
+  },
+  "testimonial": {
+    "name": "testimonial-preview",
+    "label": "TESTIMONIAL PREVIEW",
+    "title": "How Annora Sky Should Feel to Use",
+    "description": "A temporary layout preview showing the kinds of outcomes future verified user feedback should describe.",
+    "items": [
+      {
+        "title": "First-time chart reader",
+        "label": "Sample persona · United States",
+        "description": "I had seen my birth chart before, but this was the first time I understood where to start and why my Big Three mattered together."
+      },
+      {
+        "title": "Returning astrology learner",
+        "label": "Sample persona · United Kingdom",
+        "description": "The chart details are there when I want them, but I can stay with the plain-English explanation instead of getting lost in symbols."
+      },
+      {
+        "title": "Weekly transit checker",
+        "label": "Sample persona · Canada",
+        "description": "Saving my chart and coming back to the current transits makes this feel useful beyond a one-time birth chart calculation."
+      }
+    ]
+  },
+  "usage": {
+    "name": "how-to-use",
+    "label": "HOW TO USE",
+    "title": "How to Use the Birth Chart Calculator",
+    "description": "Your birth date and place are enough to begin. An exact birth time unlocks your Rising sign and houses.",
+    "items": [
+      {
+        "icon": "RiEditLine",
+        "title": "Enter Your Birth Details",
+        "description": "Add your birth date, local birth time, and birthplace. Choose the city from the results so the correct coordinates and historical time zone are used."
+      },
+      {
+        "icon": "RiSearchLine",
+        "title": "Generate Your Natal Chart",
+        "description": "Annora Sky calculates planetary positions, zodiac signs, major aspects, and—when the birth time is known—your Rising sign and houses."
+      },
+      {
+        "icon": "RiLayersLine",
+        "title": "Read, Save, and Revisit",
+        "description": "Begin with your Big Three, explore the full chart, save it on this device, and return to see how current transits have changed."
+      }
+    ]
+  },
+  "methodology": {
+    "name": "methodology",
+    "label": "CALCULATED FIRST. EXPLAINED SECOND.",
+    "title": "Clear About How Your Chart Is Made",
+    "description": "Annora Sky separates deterministic chart calculations from automated interpretation and keeps the current free experience private by default.",
+    "items": [
+      {
+        "icon": "RiCompass3Line",
+        "title": "Western Tropical",
+        "description": "The zodiac system used for signs and planetary placements."
+      },
+      {
+        "icon": "RiLayoutLine",
+        "title": "Whole Sign Houses",
+        "description": "House results appear when an exact birth time is available."
+      },
+      {
+        "icon": "RiTimeLine",
+        "title": "Location & Time Zone",
+        "description": "Birthplace coordinates and historical local time shape the calculation."
+      },
+      {
+        "icon": "RiLockLine",
+        "title": "Private by Default",
+        "description": "Saved charts stay in this browser unless you choose otherwise."
       }
     ]
   },
   "faq": {
     "name": "faq",
     "label": "FAQ",
-    "title": "Frequently Asked Questions",
-    "description": "Can't find the answer to your question? Contact us for help.",
+    "title": "Birth Chart Calculator Questions",
+    "description": "Clear answers about birth data, calculation methods, free features, privacy, and the limits of astrology.",
     "buttons": [
       {
-        "title": "Contact Us",
-        "url": "/#contact",
-        "variant": "default"
+        "title": "Create Free Chart",
+        "url": "/#birth-chart"
       }
     ],
     "items": [
       {
-        "title": "Is ShipStart free?",
-        "description": "Yes. ShipStart offers a permanently free plan with unlimited pages, user management, payment integration, analytics, and more. No credit card required and no hidden fees. Full commercial use is allowed."
+        "title": "What is a birth chart?",
+        "description": "A birth chart, also called a natal chart, is a map of the sky for the date, time, and location of your birth. It shows planetary signs, houses, angles, and relationships called aspects."
       },
       {
-        "title": "Which platforms does ShipFire Online support?",
-        "description": "Supports custom domains, Vercel, Netlify, and other major hosting platforms. A free *.shipfire.app subdomain is available for testing. SSL and CDN are configured automatically for global performance."
+        "title": "Do I need my exact birth time?",
+        "description": "An exact time is strongly recommended because it affects your Rising sign and house placements. You can still explore a partial chart without it, but some results will be limited."
       },
       {
-        "title": "Can I use ShipFire without technical experience?",
-        "description": "Absolutely. ShipFire is designed for non-technical users with a drag-and-drop editor, tutorials, and an AI assistant that provides real-time guidance. Thousands of beginners have built websites with an average learning time under 30 minutes."
+        "title": "Which astrology system does Annora Sky use?",
+        "description": "Annora Sky currently uses Western tropical astrology and Whole Sign houses. Planetary positions are calculated with Astronomy Engine, while your birthplace time zone is used to convert local birth time correctly."
       },
       {
-        "title": "Can I use ShipFire websites for commercial purposes?",
-        "description": "Yes. Websites built with ShipFire are fully commercial-ready, including selling products, subscriptions, and ads. There are no licensing restrictions or revenue sharing."
+        "title": "Is the interpretation written by an astrologer?",
+        "description": "No. Annora Sky is a technology product. Chart positions are calculated deterministically, while interpretation text is generated from documented astrology rules and automated language systems."
       },
       {
-        "title": "Can I export or migrate my ShipFire website?",
-        "description": "Yes, you can export full website code including HTML, CSS, and config files. You can migrate to your own server anytime. User and order data can also be exported as CSV for full data ownership."
+        "title": "Is the birth chart calculator free?",
+        "description": "Yes. The current free experience includes the chart wheel, Big Three, core planetary placements, major aspects, current transit highlights, and charts saved in this browser."
       },
       {
-        "title": "What can ShipFire's AI features do?",
-        "description": "The AI assistant optimizes copy, suggests layout improvements, analyzes user behavior, and predicts conversion bottlenecks. It supports SEO optimization, A/B test generation, and email content creation—trained on data from 50,000+ sites with 92% recommendation accuracy."
+        "title": "How does Annora Sky handle my birth information?",
+        "description": "The current calculator prepares your chart in the browser. Saved chart profiles remain on this device unless a future account feature clearly asks you to sync them."
       },
       {
-        "title": "How secure is my data on ShipFire?",
-        "description": "ShipFire uses enterprise-grade security with encrypted data storage, regular backups, and GDPR compliance. All payment transactions are processed through Stripe and PayPal with PCI-DSS compliance. Your data is never shared with third parties without consent."
-      },
-      {
-        "title": "Does ShipFire support multiple languages?",
-        "description": "Yes. ShipFire supports 20+ languages with automatic translation, multi-currency payment processing, and region-specific content optimization. You can create localized versions of your site for different markets with one-click language switching."
-      },
-      {
-        "title": "What kind of support does ShipFire provide?",
-        "description": "ShipFire offers comprehensive support including detailed documentation, video tutorials, community forums, and email support. Premium users get priority support with faster response times. All users have access to the AI assistant for real-time guidance."
-      }
-    ]
-  },
-  "testimonial": {
-    "name": "testimonial",
-    "label": "Testimonials",
-    "title": "What Developers Say About ShipFire",
-    "description": "See how global developers are using ShipFire to accelerate their business.",
-    "icon": "RiThumbUpLine",
-    "items": [
-      {
-        "title": "Leo",
-        "label": "Streetwear Brand Owner",
-        "description": "I used to spend three weeks building a site, only to get less than 2% conversion. With ShipFire Free, I rebuilt everything in 3 hours and hit 8.5%. Now all my time goes to product development.",
-        "image": {
-          "src": "/imgs/users/1.png"
-        }
-      },
-      {
-        "title": "Mei",
-        "label": "Social Media Manager",
-        "description": "Our team has no front-end devs and Webflow was too expensive. Switching to ShipFire saved us $3,600 a year and the AI optimization identified 5 issues that boosted our MRR by 38%.",
-        "image": {
-          "src": "/imgs/users/2.png"
-        }
-      },
-      {
-        "title": "Robin",
-        "label": "Visual Design Instructor",
-        "description": "The AI suggestions are my favorite. Last week it recommended a pricing page tweak—after applying it our paid conversion jumped from 4% to 6.2%, generating an extra $2,000/month.",
-        "image": {
-          "src": "/imgs/users/3.png"
-        }
-      },
-      {
-        "title": "Emma Taylor",
-        "label": "Content Creator",
-        "description": "I built 12 landing pages for clients using ShipFire, each in about 20 minutes. The built-in A/B testing and analytics simplified optimization—client ROI improved by 55%.",
-        "image": {
-          "src": "/imgs/users/6.png"
-        }
-      },
-      {
-        "title": "Carlos Martinez",
-        "label": "T-Shirt Designer",
-        "description": "I sell online courses and WordPress plugins always caused conflicts. ShipFire tripled my site speed and made checkout smoother. Refunds dropped by 70%—students love the experience.",
-        "image": {
-          "src": "/imgs/users/4.png"
-        }
-      },
-      {
-        "title": "Jasmine Lee",
-        "label": "Event Organizer",
-        "description": "As a developer I didn't think I needed a builder, but ShipFire is free and surprisingly powerful. I used it to validate a new startup idea: went from concept to live MVP in 4 hours.",
-        "image": {
-          "src": "/imgs/users/5.png"
-        }
-      },
-      {
-        "title": "Alex Chen",
-        "label": "SaaS Founder",
-        "description": "The multi-language support is a game-changer for our global expansion. We launched in 5 countries simultaneously with localized content and payment methods. Revenue increased 120% in the first quarter.",
-        "image": {
-          "src": "/imgs/users/7.png"
-        }
-      },
-      {
-        "title": "Sarah Johnson",
-        "label": "Marketing Director",
-        "description": "ShipFire's analytics dashboard helped us identify conversion bottlenecks we never noticed before. After implementing the AI recommendations, our email signup rate doubled and customer acquisition cost dropped by 45%.",
-        "image": {
-          "src": "/imgs/users/8.png"
-        }
+        "title": "Can astrology predict exactly what will happen?",
+        "description": "No. Annora Sky presents astrology as a reflective framework, not certainty. It should never replace professional medical, legal, financial, or mental-health guidance."
       }
     ]
   },
   "cta": {
-    "name": "cta",
-    "title": "Start Building with ShipFire Today",
-    "description": "No credit card needed. No technical skills required. Build a professional site in 3 minutes. Join 50,000+ global developers and reach users worldwide. All core features are free forever.",
+    "name": "final-cta",
+    "title": "See Your Birth Chart in Motion",
+    "description": "Enter your birth details once to create your natal chart, save it in this browser, and return as your current transits change.",
     "buttons": [
       {
-        "title": "Start Creating Now",
-        "icon": "RiGiftLine",
-        "url": "/#generator",
-        "target": "_self",
-        "variant": "default"
+        "title": "Create My Free Chart",
+        "url": "/#birth-chart",
+        "icon": "RiArrowUpLine"
       }
     ]
   },
   "footer": {
     "name": "footer",
     "brand": {
-      "title": "ShipFire",
-      "description": "ShipFire is dedicated to helping global indie developers quickly build professional SaaS websites with zero code, providing free, high-quality website building solutions with built-in AI optimization tools.",
-      "logo": {
-        "src": "/logo.png",
-        "alt": "ShipFire"
-      },
+      "title": "Annora Sky",
+      "description": "Personal astrology that helps you understand your birth chart—and what is moving through it now.",
       "url": "/"
     },
-    "copyright": "© 2025 • ShipFire. All rights reserved.",
+    "copyright": "© 2026 Annora Sky. All rights reserved.",
     "nav": {
       "items": [
         {
-          "title": "Product",
-          "children": []
-        },
-        {
-          "title": "Resources",
+          "title": "Explore",
           "children": [
-            {
-              "title": "FAQ",
-              "url": "/#faq"
-            }
+            { "title": "Birth Chart", "url": "/#birth-chart" },
+            { "title": "What You'll Discover", "url": "/#what-your-chart-reveals" },
+            { "title": "Inside Your Chart", "url": "/#features" },
+            { "title": "Current Transits", "url": "/#current-transits" },
+            { "title": "Saved Charts", "url": "/saved-charts" }
           ]
         },
         {
-          "title": "Community",
-          "children": []
+          "title": "Learn",
+          "children": [
+            { "title": "How to use", "url": "/#how-to-use" },
+            { "title": "How calculations work", "url": "/#faq" },
+            { "title": "FAQ", "url": "/#faq" },
+            { "title": "Astrology Disclaimer", "url": "/disclaimer" }
+          ]
+        },
+        {
+          "title": "Company",
+          "children": [
+            { "title": "Contact", "url": "mailto:support@annorasky.com" }
+          ]
         }
       ]
     },
-    "social": {
-      "items": [
-        {
-          "title": "X",
-          "icon": "RiTwitterXFill",
-          "url": "https://x.com/shipfire",
-          "target": "_blank"
-        },
-        {
-          "title": "Github",
-          "icon": "RiGithubFill",
-          "url": "https://github.com/shipfire",
-          "target": "_blank"
-        },
-        {
-          "title": "Discord",
-          "icon": "RiDiscordFill",
-          "url": "https://discord.gg/shipfire",
-          "target": "_blank"
-        },
-        {
-          "title": "Email",
-          "icon": "RiMailLine",
-          "url": "mailto:support@shipfire.com",
-          "target": "_self"
-        }
-      ]
-    },
+    "social": { "items": [] },
     "badges": [],
     "agreement": {
       "items": [
-        {
-          "title": "Privacy Policy",
-          "url": "/privacy-policy"
-        },
-        {
-          "title": "Terms of Service",
-          "url": "/terms-of-service"
-        }
+        { "title": "Privacy Policy", "url": "/privacy-policy" },
+        { "title": "Terms of Service", "url": "/terms-of-service" },
+        { "title": "Disclaimer", "url": "/disclaimer" }
       ]
     }
   }

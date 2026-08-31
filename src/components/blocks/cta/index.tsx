@@ -13,7 +13,7 @@ export default function CTA({ section }: { section: SectionType }) {
       <div className="px-8">
         <div className='flex items-center justify-center rounded-2xl  bg-[url("/imgs/masks/circle.svg")] bg-cover bg-center px-8 py-12 text-center md:p-16'>
           <div className="mx-auto max-w-(--breakpoint-md)">
-            <h2 className="mb-4 text-balance text-3xl font-semibold md:text-5xl">
+            <h2 className="mb-4 text-balance font-serif text-3xl font-semibold tracking-[-0.035em] md:text-5xl">
               {section.title}
             </h2>
             <p className="text-muted-foreground md:text-lg">

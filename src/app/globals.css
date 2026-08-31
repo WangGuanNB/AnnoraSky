@@ -30,7 +30,7 @@ pre {
   @apply px-4;
 }
 
-/* ShipAny 风格动态背景动画 - 更明显版本 */
+/* Legacy animated background utilities retained for secondary screens. */
 @keyframes blob {
   0%, 100% {
     transform: translate(0, 0) scale(1);

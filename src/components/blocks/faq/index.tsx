@@ -27,7 +27,7 @@ export default function FAQ({ section, layout = "default" }: FAQProps) {
           {section.label}
         </Badge>
       )}
-      <h2 className="text-balance text-4xl font-medium lg:text-5xl">
+      <h2 className="text-balance font-serif text-4xl font-semibold tracking-[-0.035em] lg:text-5xl">
         {section.title}
       </h2>
       {section.description && (
