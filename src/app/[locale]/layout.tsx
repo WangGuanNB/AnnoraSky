@@ -18,7 +18,7 @@ export async function generateMetadata({
   setRequestLocale(locale);
 
   const t = await getTranslations();
-  const siteUrl = process.env.NEXT_PUBLIC_WEB_URL || "https://annorasky.com";
+  const siteUrl = `${(process.env.NEXT_PUBLIC_WEB_URL || "https://annorasky.com").replace(/\/$/, "")}/`;
   const title = t("metadata.title") || "Free Birth Chart Calculator | Annora Sky";
   const description = t("metadata.description") || "Create your free birth chart with Annora Sky.";
 

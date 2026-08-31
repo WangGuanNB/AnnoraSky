@@ -14,19 +14,26 @@ export function getBaseUrl(): string {
   return url.replace(/\/$/, ''); // 去除末尾斜杠，防止生成 //
 }
 
-/**
- * 生成多语言canonical URL
- * 统一处理所有页面的canonical URL逻辑
- */
-export function getCanonicalUrl(locale: string, path: string = '/'): string {
-  const baseUrl = getBaseUrl();
-  const cleanPath = path === '/' ? '' : path;
+function ensureTrailingSlash(path: string): string {
+  if (!path || path === "/") return "/";
+  return path.endsWith("/") ? path : `${path}/`;
+}
 
-  if (locale === 'en') {
-    return cleanPath ? `${baseUrl}${cleanPath}` : `${baseUrl}/`;
+/**
+ * 生成多语言 canonical URL
+ * 与 next.config trailingSlash: true 保持一致，统一带尾部斜杠
+ */
+export function getCanonicalUrl(locale: string, path: string = "/"): string {
+  const baseUrl = getBaseUrl();
+  const normalizedPath = ensureTrailingSlash(path);
+
+  if (locale === "en") {
+    return normalizedPath === "/" ? `${baseUrl}/` : `${baseUrl}${normalizedPath}`;
   }
 
-  return cleanPath ? `${baseUrl}/${locale}${cleanPath}` : `${baseUrl}/${locale}`;
+  return normalizedPath === "/"
+    ? `${baseUrl}/${locale}/`
+    : `${baseUrl}/${locale}${normalizedPath}`;
 }
 
 // ========================================

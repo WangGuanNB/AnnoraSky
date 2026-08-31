@@ -18,7 +18,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   // ❌ 已移除 output: "standalone" - Cloudflare Workers 不需要此配置
   reactStrictMode: false,
-  trailingSlash: false,
+  trailingSlash: true,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   images: {
     remotePatterns: [
