@@ -11,6 +11,7 @@ import Testimonial from "@/components/blocks/testimonial";
 import { getCanonicalUrl } from "@/lib/utils";
 import { getLandingPage } from "@/services/page";
 import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 // 启用 ISR（增量静态再生）：24小时重新生成一次，降低 CPU 消耗
 export const revalidate = 86400;
@@ -21,9 +22,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const title = "Free Astrology Birth Chart Calculator | Annora Sky";
-  const description =
-    "Create a free Western astrology birth chart from your birth date, time, and place. Understand your Sun, Moon, Rising, houses, aspects, and current transits.";
+  setRequestLocale(locale);
+  const t = await getTranslations("metadata");
+  const title = t("title");
+  const description = t("description");
 
   const metadata: Metadata = {
     title,
@@ -57,29 +59,49 @@ export default async function LandingPage({
         text: item.description,
       },
     }));
+  const structuredDataLocale =
+    locale === "de"
+      ? {
+          appName: "Annora Sky Geburtshoroskop",
+          appDescription:
+            "Kostenloser Rechner für tropische westliche Geburtshoroskope: Sonne, Mond, Aszendent, Häuser, Aspekte und aktuelle Transite.",
+          features: [
+            "Tropisches westliches Geburtshoroskop",
+            "Sonne, Mond und Aszendent",
+            "Ganzzeichen-Häuser",
+            "Wichtige Planetenaspekte",
+            "Persönliche Transit-Highlights",
+            "Im Browser gespeicherte Horoskope",
+          ],
+        }
+      : {
+          appName: "Annora Sky Birth Chart Calculator",
+          appDescription:
+            "A free Western astrology birth chart calculator for understanding your Sun, Moon, Rising, houses, aspects, and current transits.",
+          features: [
+            "Western tropical birth chart",
+            "Sun, Moon, and Rising signs",
+            "Whole Sign houses",
+            "Major planetary aspects",
+            "Current transit highlights",
+            "Device-local saved charts",
+          ],
+        };
   const structuredData = [
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "Annora Sky Birth Chart Calculator",
-      url: `${siteUrl}/`,
+      name: structuredDataLocale.appName,
+      url: `${siteUrl}${locale === "en" ? "/" : `/${locale}/`}`,
       applicationCategory: "LifestyleApplication",
       operatingSystem: "Any",
-      description:
-        "A free Western astrology birth chart calculator for understanding your Sun, Moon, Rising, houses, aspects, and current transits.",
+      description: structuredDataLocale.appDescription,
       offers: {
         "@type": "Offer",
         price: "0",
-        priceCurrency: "USD",
+        priceCurrency: locale === "de" ? "EUR" : "USD",
       },
-      featureList: [
-        "Western tropical birth chart",
-        "Sun, Moon, and Rising signs",
-        "Whole Sign houses",
-        "Major planetary aspects",
-        "Current transit highlights",
-        "Device-local saved charts",
-      ],
+      featureList: structuredDataLocale.features,
     },
     ...(faqEntities.length > 0
       ? [

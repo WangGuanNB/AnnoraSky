@@ -1,4 +1,4 @@
-CREATE TABLE `affiliates_shipfire` (
+CREATE TABLE `affiliates_annorasky` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`user_uuid` text NOT NULL,
 	`created_at` integer,
@@ -10,7 +10,7 @@ CREATE TABLE `affiliates_shipfire` (
 	`reward_amount` integer DEFAULT 0 NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE `apikeys_shipfire` (
+CREATE TABLE `apikeys_annorasky` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`api_key` text NOT NULL,
 	`title` text,
@@ -19,8 +19,8 @@ CREATE TABLE `apikeys_shipfire` (
 	`status` text
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `apikeys_shipfire_api_key_unique` ON `apikeys_shipfire` (`api_key`);--> statement-breakpoint
-CREATE TABLE `credits_shipfire` (
+CREATE UNIQUE INDEX `apikeys_annorasky_api_key_unique` ON `apikeys_annorasky` (`api_key`);--> statement-breakpoint
+CREATE TABLE `credits_annorasky` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`trans_no` text NOT NULL,
 	`created_at` integer,
@@ -31,8 +31,8 @@ CREATE TABLE `credits_shipfire` (
 	`expired_at` integer
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `credits_shipfire_trans_no_unique` ON `credits_shipfire` (`trans_no`);--> statement-breakpoint
-CREATE TABLE `feedbacks_shipfire` (
+CREATE UNIQUE INDEX `credits_annorasky_trans_no_unique` ON `credits_annorasky` (`trans_no`);--> statement-breakpoint
+CREATE TABLE `feedbacks_annorasky` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`created_at` integer,
 	`status` text,
@@ -41,7 +41,7 @@ CREATE TABLE `feedbacks_shipfire` (
 	`rating` integer
 );
 --> statement-breakpoint
-CREATE TABLE `orders_shipfire` (
+CREATE TABLE `orders_annorasky` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`order_no` text NOT NULL,
 	`created_at` integer,
@@ -70,8 +70,8 @@ CREATE TABLE `orders_shipfire` (
 	`pay_type` text
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `orders_shipfire_order_no_unique` ON `orders_shipfire` (`order_no`);--> statement-breakpoint
-CREATE TABLE `posts_shipfire` (
+CREATE UNIQUE INDEX `orders_annorasky_order_no_unique` ON `orders_annorasky` (`order_no`);--> statement-breakpoint
+CREATE TABLE `posts_annorasky` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`uuid` text NOT NULL,
 	`slug` text,
@@ -87,8 +87,8 @@ CREATE TABLE `posts_shipfire` (
 	`locale` text
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `posts_shipfire_uuid_unique` ON `posts_shipfire` (`uuid`);--> statement-breakpoint
-CREATE TABLE `users_shipfire` (
+CREATE UNIQUE INDEX `posts_annorasky_uuid_unique` ON `posts_annorasky` (`uuid`);--> statement-breakpoint
+CREATE TABLE `users_annorasky` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`uuid` text NOT NULL,
 	`email` text NOT NULL,
@@ -106,5 +106,5 @@ CREATE TABLE `users_shipfire` (
 	`is_affiliate` integer DEFAULT false NOT NULL
 );
 --> statement-breakpoint
-CREATE UNIQUE INDEX `users_shipfire_uuid_unique` ON `users_shipfire` (`uuid`);--> statement-breakpoint
-CREATE UNIQUE INDEX `email_shipfire_provider_unique_idx` ON `users_shipfire` (`email`,`signin_provider`);
+CREATE UNIQUE INDEX `users_annorasky_uuid_unique` ON `users_annorasky` (`uuid`);--> statement-breakpoint
+CREATE UNIQUE INDEX `email_annorasky_provider_unique_idx` ON `users_annorasky` (`email`,`signin_provider`);

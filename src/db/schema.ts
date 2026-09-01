@@ -8,7 +8,7 @@ import {
 
 // Users table
 export const users = sqliteTable(
-  "users_shipfire",
+  "users_annorasky",
   {
     id: integer().primaryKey({ autoIncrement: true }),
     uuid: text().notNull().unique(),
@@ -27,7 +27,7 @@ export const users = sqliteTable(
     is_affiliate: integer({ mode: "boolean" }).notNull().default(false),
   },
   (table) => [
-    uniqueIndex("email_shipfire_provider_unique_idx").on(
+    uniqueIndex("email_annorasky_provider_unique_idx").on(
       table.email,
       table.signin_provider
     ),
@@ -39,7 +39,7 @@ export const users = sqliteTable(
 
 // Orders table
 export const orders = sqliteTable(
-  "orders_shipfire",
+  "orders_annorasky",
   {
     id: integer().primaryKey({ autoIncrement: true }),
     order_no: text().notNull().unique(),
@@ -84,7 +84,7 @@ export const orders = sqliteTable(
 
 // API Keys table
 export const apikeys = sqliteTable(
-  "apikeys_shipfire",
+  "apikeys_annorasky",
   {
     id: integer().primaryKey({ autoIncrement: true }),
     api_key: text().notNull().unique(),
@@ -102,7 +102,7 @@ export const apikeys = sqliteTable(
 
 // Credits table
 export const credits = sqliteTable(
-  "credits_shipfire",
+  "credits_annorasky",
   {
     id: integer().primaryKey({ autoIncrement: true }),
     trans_no: text().notNull().unique(),
@@ -124,7 +124,7 @@ export const credits = sqliteTable(
 
 // Posts table
 export const posts = sqliteTable(
-  "posts_shipfire",
+  "posts_annorasky",
   {
     id: integer().primaryKey({ autoIncrement: true }),
     uuid: text().notNull().unique(),
@@ -153,7 +153,7 @@ export const posts = sqliteTable(
 
 // Affiliates table
 export const affiliates = sqliteTable(
-  "affiliates_shipfire",
+  "affiliates_annorasky",
   {
     id: integer().primaryKey({ autoIncrement: true }),
     user_uuid: text().notNull(),
@@ -175,7 +175,7 @@ export const affiliates = sqliteTable(
 
 // Feedbacks table
 export const feedbacks = sqliteTable(
-  "feedbacks_shipfire",
+  "feedbacks_annorasky",
   {
     id: integer().primaryKey({ autoIncrement: true }),
     created_at: integer({ mode: "timestamp" }),

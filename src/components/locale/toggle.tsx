@@ -22,27 +22,7 @@ export default function ({ isIcon = false }: { isIcon?: boolean }) {
 
   const handleSwitchLanguage = (value: string) => {
     if (value !== locale) {
-      let newPath = '';
-      
-      if (value === 'en') {
-        // 英文是默认语言，不需要前缀
-        if (pathname === '/zh') {
-          newPath = '/';
-        } else {
-          newPath = pathname.replace(/^\/zh/, '') || '/';
-        }
-      } else {
-        // 中文需要前缀
-        if (pathname === '/' || !pathname.startsWith('/')) {
-          newPath = `/${value}`;
-        } else if (pathname.startsWith('/zh')) {
-          newPath = pathname.replace(/^\/zh/, `/${value}`);
-        } else {
-          newPath = `/${value}${pathname}`;
-        }
-      }
-      
-      window.location.href = newPath;
+      router.replace(pathname, { locale: value });
     }
   };
 

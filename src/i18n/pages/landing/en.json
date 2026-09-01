@@ -96,9 +96,9 @@
       ]
     },
     "buttons": [],
-    "show_sign": false,
+    "show_sign": true,
     "show_theme": false,
-    "show_locale": false
+    "show_locale": true
   },
   "hero": {
     "name": "birth-chart",

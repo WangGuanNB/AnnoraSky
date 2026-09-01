@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "title": "Free Astrology Birth Chart Calculator | Annora Sky",
-    "description": "Create a free Western astrology birth chart from your birth date, time, and place. Understand your Sun, Moon, Rising, houses, aspects, and current transits.",
-    "keywords": "birth chart calculator, free birth chart, natal chart, astrology chart, current transits, synastry chart"
+    "title": "Geburtshoroskop berechnen – kostenlos | Annora Sky",
+    "description": "Erstelle dein tropisches westliches Geburtshoroskop aus Geburtsdatum, -zeit und -ort. Verstehe Sonne, Mond, Aszendent, Häuser, Aspekte und aktuelle Transite — kostenlos und ohne Anmeldung.",
+    "keywords": "Geburtshoroskop berechnen, Geburtshoroskop kostenlos, Geburtshoroskop-Rechner, Aszendent berechnen, aktuelle Transite"
   },
   "user": {
-    "sign_in": "Sign In",
-    "sign_out": "Sign Out",
+    "sign_in": "Anmelden",
+    "sign_out": "Abmelden",
     "credits": "Credits",
     "api_keys": "API Keys",
     "my_orders": "My Orders",
@@ -201,23 +201,23 @@
   },
   "annoraSky": {
     "birthChartForm": {
-      "eyebrow": "Start your chart",
-      "title": "Enter your birth details",
-      "noSignup": "No signup",
-      "birthDate": "Birth date",
-      "birthTime": "Birth time",
-      "birthplace": "Birthplace",
-      "birthplacePlaceholder": "Start typing a city",
-      "searchingPlaces": "Searching places",
-      "placeSelected": "Place selected",
-      "unknownTime": "I don't know my exact birth time",
-      "submitting": "Preparing your chart",
-      "submit": "Create my free chart",
-      "privacy": "Your chart is calculated and stored in this browser.",
-      "viewSaved": "View saved charts",
-      "errorNoLocation": "Choose a birthplace from the search results so we can use the correct time zone.",
-      "errorBrowser": "This browser could not prepare your chart. Please check privacy settings and try again.",
-      "errorPlaceSearch": "Place search is unavailable."
+      "eyebrow": "Horoskop starten",
+      "title": "Geburtsdaten eingeben",
+      "noSignup": "Ohne Anmeldung",
+      "birthDate": "Geburtsdatum",
+      "birthTime": "Geburtszeit",
+      "birthplace": "Geburtsort",
+      "birthplacePlaceholder": "Stadt eingeben",
+      "searchingPlaces": "Suche Orte",
+      "placeSelected": "Ort ausgewählt",
+      "unknownTime": "Ich kenne meine genaue Geburtszeit nicht",
+      "submitting": "Horoskop wird berechnet",
+      "submit": "Mein Horoskop erstellen",
+      "privacy": "Dein Horoskop wird in diesem Browser berechnet und gespeichert.",
+      "viewSaved": "Gespeicherte Horoskope",
+      "errorNoLocation": "Wähle einen Geburtsort aus den Suchergebnissen, damit die richtige Zeitzone verwendet wird.",
+      "errorBrowser": "Dieser Browser konnte dein Horoskop nicht vorbereiten. Bitte prüfe die Datenschutzeinstellungen und versuche es erneut.",
+      "errorPlaceSearch": "Die Ortssuche ist derzeit nicht verfügbar."
     }
   },
   "payment": {

@@ -15,6 +15,7 @@ import type { BirthDetails, LocationChoice } from "@/lib/astrology/types";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { useTranslations } from "next-intl";
 
 import { AnnoraButton, AnnoraEyebrow, AnnoraInput } from "./annora-ui";
 
@@ -23,6 +24,7 @@ export default function BirthChartForm({
 }: {
   onChartGenerated?: (details: BirthDetails) => void;
 }) {
+  const t = useTranslations("annoraSky.birthChartForm");
   const router = useRouter();
   const [unknownTime, setUnknownTime] = useState(false);
   const [placeQuery, setPlaceQuery] = useState("");
@@ -54,7 +56,7 @@ export default function BirthChartForm({
         };
 
         if (!response.ok) {
-          throw new Error(payload.error || "Place search is unavailable.");
+          throw new Error(payload.error || t("errorPlaceSearch"));
         }
 
         setLocations(payload.results || []);
@@ -86,7 +88,7 @@ export default function BirthChartForm({
     setError("");
 
     if (!selectedLocation) {
-      setError("Choose a birthplace from the search results so we can use the correct time zone.");
+      setError(t("errorNoLocation"));
       return;
     }
 
@@ -110,7 +112,7 @@ export default function BirthChartForm({
       }
     } catch {
       setIsSubmitting(false);
-      setError("This browser could not prepare your chart. Please check privacy settings and try again.");
+      setError(t("errorBrowser"));
     }
   }
 
@@ -122,20 +124,20 @@ export default function BirthChartForm({
       <div className="mb-4 flex items-start justify-between gap-4">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-annora-mauve">
-            Start your chart
+            {t("eyebrow")}
           </p>
           <h2 className="mt-1.5 font-serif text-xl text-annora-ink sm:text-2xl">
-            Enter your birth details
+            {t("title")}
           </h2>
         </div>
         <AnnoraEyebrow className="border-transparent bg-[#f4ecef] px-3 py-1 font-medium normal-case tracking-normal text-annora-plum-muted">
-          No signup
+          {t("noSignup")}
         </AnnoraEyebrow>
       </div>
 
       <div className="grid gap-3.5 sm:grid-cols-2">
         <Label className="grid gap-2 text-sm font-medium text-[#3a303b]">
-          Birth date
+          {t("birthDate")}
           <AnnoraInput
             required
             name="birthDate"
@@ -145,7 +147,7 @@ export default function BirthChartForm({
         </Label>
 
         <Label className="grid gap-2 text-sm font-medium text-[#3a303b]">
-          Birth time
+          {t("birthTime")}
           <AnnoraInput
             required={!unknownTime}
             disabled={unknownTime}
@@ -156,7 +158,7 @@ export default function BirthChartForm({
         </Label>
 
         <div className="relative grid gap-2 text-sm font-medium text-[#3a303b] sm:col-span-2">
-          <Label htmlFor="birth-place">Birthplace</Label>
+          <Label htmlFor="birth-place">{t("birthplace")}</Label>
           <div className="relative">
             <MapPin
               className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#8b7b84]"
@@ -171,7 +173,7 @@ export default function BirthChartForm({
                 setSelectedLocation(null);
               }}
               autoComplete="off"
-              placeholder="Start typing a city"
+              placeholder={t("birthplacePlaceholder")}
               role="combobox"
               aria-autocomplete="list"
               aria-expanded={locations.length > 0}
@@ -181,13 +183,13 @@ export default function BirthChartForm({
             {isSearching && (
               <LoaderCircle
                 className="absolute right-4 top-1/2 size-4 -translate-y-1/2 animate-spin text-[#8b5c7e]"
-                aria-label="Searching places"
+                aria-label={t("searchingPlaces")}
               />
             )}
             {selectedLocation && !isSearching && (
               <Check
                 className="absolute right-4 top-1/2 size-4 -translate-y-1/2 text-[#607c65]"
-                aria-label="Place selected"
+                aria-label={t("placeSelected")}
               />
             )}
           </div>
@@ -230,7 +232,7 @@ export default function BirthChartForm({
           className="border-[#bda9b6] focus-visible:ring-annora-mauve/30"
         />
         <Label htmlFor="unknown-birth-time" className="cursor-pointer font-normal text-[#645961]">
-          I don&apos;t know my exact birth time
+          {t("unknownTime")}
         </Label>
       </div>
 
@@ -242,11 +244,11 @@ export default function BirthChartForm({
         {isSubmitting ? (
           <>
             <LoaderCircle className="size-4 animate-spin" aria-hidden="true" />
-            Preparing your chart
+            {t("submitting")}
           </>
         ) : (
           <>
-            Create my free chart
+            {t("submit")}
             <ArrowRight className="size-4" aria-hidden="true" />
           </>
         )}
@@ -255,11 +257,11 @@ export default function BirthChartForm({
       <div className="mt-3 flex flex-col items-center justify-center gap-2 text-center text-xs text-[#7d7078] sm:flex-row sm:gap-3">
         <span className="flex items-center gap-2">
           <LockKeyhole className="size-3.5" aria-hidden="true" />
-          Your chart is calculated and stored in this browser.
+          {t("privacy")}
         </span>
         <span className="hidden text-[#c4b7be] sm:inline">•</span>
         <Link href="/saved-charts" className="font-semibold text-[#6d465f] underline-offset-4 hover:underline">
-          View saved charts
+          {t("viewSaved")}
         </Link>
       </div>
 

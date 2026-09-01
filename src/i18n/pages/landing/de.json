@@ -1,0 +1,455 @@
+{
+  "template": "annora-sky",
+  "theme": "light",
+  "header": {
+    "brand": { "title": "Annora Sky", "url": "/" },
+    "nav": {
+      "items": [
+        {
+          "title": "Geburtshoroskop",
+          "children": [
+            {
+              "title": "Geburtshoroskop berechnen",
+              "description": "Erstelle ein vollständiges Geburtshoroskop aus Geburtsdatum, -zeit und -ort."
+            },
+            {
+              "title": "Die Großen Drei",
+              "description": "Finde und verstehe dein Sonnen-, Mond- und Aszendenten-Zeichen."
+            },
+            {
+              "title": "Mondzeichen berechnen",
+              "description": "Entdecke emotionale Bedürfnisse, Instinkte und deinen inneren Rhythmus."
+            },
+            {
+              "title": "Aszendent berechnen",
+              "description": "Berechne deinen Aszendenten mit genauer Geburtszeit und Geburtsort."
+            }
+          ]
+        },
+        {
+          "title": "Transite",
+          "children": [
+            {
+              "title": "Aktuelle Transite",
+              "description": "Sieh, welche Planeten dein Geburtshoroskop gerade berühren."
+            },
+            {
+              "title": "Transit-Kalender",
+              "description": "Wichtige persönliche Transit-Termine in einer Zeitleiste."
+            },
+            {
+              "title": "7-Tage-Ausblick",
+              "description": "Die nächsten persönlichen Transite für die kommende Woche."
+            },
+            {
+              "title": "30-Tage-Ausblick",
+              "description": "Längere Muster für den kommenden Monat im Blick behalten."
+            }
+          ]
+        },
+        {
+          "title": "Kompatibilität",
+          "children": [
+            {
+              "title": "Synastrie-Rechner",
+              "description": "Vergleiche zwei Geburtshoroskope und ihre Aspekte zueinander."
+            },
+            {
+              "title": "Horoskop-Kompatibilität",
+              "description": "Verstehe, wie zwei Menschen über zentrale Stellungen verbunden sind."
+            },
+            {
+              "title": "Beziehungsberichte",
+              "description": "Kommunikation, Anziehung, Unterstützung und Spannung erkunden."
+            }
+          ]
+        },
+        {
+          "title": "Lernen",
+          "children": [
+            {
+              "title": "Astrologie-Grundlagen",
+              "description": "Ein einsteigerfreundlicher Weg durch die Geburtshoroskop-Astrologie."
+            },
+            {
+              "title": "Planeten",
+              "description": "Was jeder Planet in einem Geburtshoroskop bedeutet."
+            },
+            {
+              "title": "Sternzeichen",
+              "description": "Wie die zwölf Zeichen planetarische Energien prägen."
+            },
+            {
+              "title": "Häuser",
+              "description": "Die zwölf Lebensbereiche in einem Horoskop."
+            },
+            {
+              "title": "Aspekte",
+              "description": "Wie Winkel zwischen Planeten verschiedene Themen verbinden."
+            },
+            {
+              "title": "Methodik",
+              "description": "Wie Annora Sky berechnet und Ergebnisse erklärt."
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [],
+    "show_sign": true,
+    "show_theme": false,
+    "show_locale": true
+  },
+  "hero": {
+    "name": "birth-chart",
+    "variant": "tool",
+    "announcement": {
+      "label": "ANNORA SKY",
+      "title": "DEIN HOROSKOP IN BEWEGUNG"
+    },
+    "title": "Geburtshoroskop berechnen",
+    "description": "Erstelle dein Geburtshoroskop aus Geburtsdatum, -zeit und -ort — kostenlos und ohne Anmeldung. Starte mit Sonne, Mond und Aszendent, und sieh, wie der heutige Himmel dein Horoskop berührt.",
+    "metrics": ["Tropisch · Westlich", "Ohne Anmeldung", "Im Browser gespeichert"]
+  },
+  "introduce": {
+    "name": "what-your-chart-reveals",
+    "label": "WAS DEIN HOROSKOP ZEIGT",
+    "title": "Dein Geburtshoroskop in vier klaren Ebenen erklärt",
+    "description": "Beginne mit den Großen Drei, dann erkunde Planetenstellungen, Häuser, Aspekte und aktuelle Transite — ohne alles auf einmal entziffern zu müssen.",
+    "items": [
+      {
+        "label": "DEINE NATAL-KARTE",
+        "icon": "RiCompass3Line",
+        "title": "Sieh die vollständige Form deines Geburtshoroskops",
+        "description": "Dein Geburtshoroskop bildet Sonne, Mond, Planeten, Sternzeichen, Achsen, Häuser und Aspekte für den exakten Himmel bei deiner Geburt ab. Annora Sky fasst alles in einer lesbaren Ansicht zusammen.",
+        "image": {
+          "src": "annora-preview:chart",
+          "alt": "Annora Sky Geburtshoroskop-Rad mit Sternzeichen, Planeten, Häusern und Achsen"
+        },
+        "buttons": [
+          {
+            "title": "Mein Horoskop erstellen",
+            "url": "/#birth-chart",
+            "icon": "RiArrowRightLine"
+          }
+        ]
+      },
+      {
+        "label": "MIT DEM WICHTIGSTEN STARTEN",
+        "icon": "RiSunLine",
+        "title": "Verstehe Sonne, Mond und Aszendent",
+        "description": "Die Großen Drei sind dein praktischer Einstieg: Identität und Richtung, emotionale Bedürfnisse und — mit bekannter Geburtszeit — wie du auf die Welt triffst.",
+        "image": {
+          "src": "annora-preview:big-three",
+          "alt": "Annora Sky Ergebnis der Großen Drei mit Sonne, Mond und Aszendent"
+        }
+      },
+      {
+        "label": "MUSTER ZWISCHEN PLANETEN",
+        "icon": "RiShareLine",
+        "title": "Häuser, Stellungen und wichtige Aspekte erkunden",
+        "description": "Öffne technische Details, wenn du sie brauchst. Sieh Planetenzeichen und Grade, Ganzzeichen-Häuser und die stärksten geometrischen Beziehungen in deinem Geburtshoroskop.",
+        "image": {
+          "src": "annora-preview:details",
+          "alt": "Annora Sky Planetenstellungen, Ganzzeichen-Häuser und wichtige Aspekte"
+        }
+      },
+      {
+        "label": "DEIN HOROSKOP IN BEWEGUNG",
+        "icon": "RiSparklingLine",
+        "title": "Komm zurück, wenn sich der Himmel verändert",
+        "description": "Dein Geburtshoroskop bleibt gleich, aber aktuelle Transite bewegen sich weiter. Öffne ein gespeichertes Horoskop und sieh, welche planetaren Kontakte jetzt am nächsten liegen.",
+        "image": {
+          "src": "annora-preview:transits",
+          "alt": "Annora Sky persönliche Transit-Zeitleiste mit aktiven planetaren Kontakten"
+        },
+        "buttons": [
+          {
+            "title": "Gespeicherte Horoskope",
+            "url": "/saved-charts",
+            "variant": "outline"
+          }
+        ]
+      }
+    ]
+  },
+  "feature": {
+    "name": "features",
+    "label": "IN DEINEM KOSTENLOSEN HOROSKOP",
+    "title": "Ein vollständiges Geburtshoroskop — für Einsteiger sortiert",
+    "description": "Sieh die vollständige Berechnung, ohne jedes Symbol und jedes Detail sofort verstehen zu müssen.",
+    "items": [
+      {
+        "icon": "RiLayoutLine",
+        "title": "Interaktives Horoskop-Rad",
+        "description": "Sternzeichen, Planeten, Achsen, Häuser und wichtige Aspekte in einer klaren visuellen Karte."
+      },
+      {
+        "icon": "RiStarSLine",
+        "title": "Zuerst die Großen Drei",
+        "description": "Beginne mit Sonne, Mond und Aszendent, bevor du tiefere Horoskop-Details öffnest."
+      },
+      {
+        "icon": "RiCpuLine",
+        "title": "Planeten und Häuser",
+        "description": "Erkunde Planetenzeichen, Grade und die Lebensbereiche, die jede Stellung betont."
+      },
+      {
+        "icon": "RiFingerprintLine",
+        "title": "Ehrlicher Modus ohne Geburtszeit",
+        "description": "Berechne trotzdem nützliche Stellungen und blende Ergebnisse aus, die eine genaue Zeit erfordern."
+      },
+      {
+        "icon": "RiShareLine",
+        "title": "Wichtige Aspekte",
+        "description": "Verstehe die stärksten Winkelbeziehungen zwischen Planeten und die Themen, die sie verbinden."
+      },
+      {
+        "icon": "RiSparklingLine",
+        "title": "Persönliche Transit-Highlights",
+        "description": "Vergleiche den heutigen Himmel mit deinem Geburtshoroskop und sieh, welche Kontakte jetzt am nächsten liegen."
+      }
+    ]
+  },
+  "transits": {
+    "name": "current-transits",
+    "label": "DEIN HOROSKOP IN BEWEGUNG",
+    "title": "Der Himmel verändert sich. Dein Geburtshoroskop gibt ihm Kontext.",
+    "description": "Ein Geburtshoroskop beschreibt den Himmel bei deiner Geburt. Persönliche Transite vergleichen dieses Horoskop mit den Planeten von heute — ein guter Grund, über die erste Berechnung hinaus zurückzukommen.",
+    "buttons": [
+      {
+        "title": "Mein Horoskop erstellen",
+        "url": "/#birth-chart"
+      },
+      {
+        "title": "Gespeicherte Horoskope",
+        "url": "/saved-charts",
+        "variant": "outline"
+      }
+    ],
+    "items": [
+      {
+        "label": "JETZT AM STÄRKSTEN",
+        "icon": "RiSparklingLine",
+        "title": "Venus Trigon zum Natal-Mond",
+        "description": "Ein Beispiel-Transit, der Beziehungsthemen mit emotionalen Bedürfnissen und Alltagsleichtigkeit verbindet."
+      },
+      {
+        "label": "DIESE WOCHE",
+        "icon": "RiCalendarEventLine",
+        "title": "Merkur Sextil zur Natal-Sonne",
+        "description": "Ein Beispiel dafür, wie ein kurzer Transit Kommunikation, Entscheidungen und Selbstausdruck betonen kann."
+      },
+      {
+        "label": "ALS NÄCHSTES",
+        "icon": "RiArrowRightLine",
+        "title": "Mars betritt dein 10. Haus",
+        "description": "Eine Haus-Vorschau, die zeigt, wohin die nächste planetare Verschiebung Aufmerksamkeit und Schwung lenken kann."
+      }
+    ]
+  },
+  "benefit": {
+    "name": "core-benefits",
+    "label": "WARUM ANNORA SKY",
+    "title": "Persönliche Astrologie ohne die übliche Überforderung",
+    "description": "Annora Sky macht ein vollständiges Geburtshoroskop leichter verständlich, wiederaufrufbar und als reflektierendes Werkzeug nutzbar.",
+    "items": [
+      {
+        "icon": "RiEyeLine",
+        "title": "Klarheit vor Komplexität",
+        "description": "Beginne mit den stärksten Themen in verständlicher Sprache. Grade, Häuser und Aspekt-Details bleiben verfügbar, wenn du tiefer gehen willst.",
+        "image": {
+          "src": "annora-preview:big-three",
+          "alt": "Verständliche Erklärungen der Großen Drei im Annora Sky Geburtshoroskop"
+        },
+        "buttons": [
+          {
+            "title": "Horoskop erstellen",
+            "url": "/#birth-chart"
+          }
+        ]
+      },
+      {
+        "icon": "RiCalendarEventLine",
+        "title": "Persönliche Transite, keine allgemeinen Horoskope",
+        "description": "Aktuelle Transite vergleichen die Planeten von heute mit deinem eigenen Geburtshoroskop und zeigen, welche Verbindungen jetzt am nächsten und spürbarer sein können.",
+        "image": {
+          "src": "annora-preview:transits",
+          "alt": "Persönliche Transit-Highlights im Vergleich zum individuellen Geburtshoroskop"
+        }
+      },
+      {
+        "icon": "RiLockLine",
+        "title": "Privat und leicht wiederzufinden",
+        "description": "Kein Konto nötig. Speichere nützliche Horoskope in diesem Browser, öffne sie später wieder und aktualisiere aktuelle Transite ohne erneute Eingabe.",
+        "image": {
+          "src": "annora-preview:saved",
+          "alt": "Geburtshoroskope privat im Browser des Nutzers gespeichert"
+        },
+        "buttons": [
+          {
+            "title": "Gespeicherte Horoskope",
+            "url": "/saved-charts",
+            "variant": "outline"
+          }
+        ]
+      }
+    ]
+  },
+  "usage": {
+    "name": "how-to-use",
+    "label": "SO FUNKTIONIERT ES",
+    "title": "So berechnest du dein Geburtshoroskop",
+    "description": "Geburtsdatum und -ort reichen zum Starten. Eine genaue Geburtszeit schaltet Aszendent und Häuser frei.",
+    "items": [
+      {
+        "icon": "RiEditLine",
+        "title": "Geburtsdaten eingeben",
+        "description": "Trage Geburtsdatum, lokale Geburtszeit und Geburtsort ein. Wähle die Stadt aus den Ergebnissen, damit Koordinaten und historische Zeitzone stimmen."
+      },
+      {
+        "icon": "RiSearchLine",
+        "title": "Geburtshoroskop erstellen",
+        "description": "Annora Sky berechnet Planetenpositionen, Sternzeichen, wichtige Aspekte und — bei bekannter Geburtszeit — Aszendent und Häuser."
+      },
+      {
+        "icon": "RiLayersLine",
+        "title": "Lesen, speichern, wiederkommen",
+        "description": "Starte mit den Großen Drei, erkunde das volle Horoskop, speichere es auf diesem Gerät und sieh später, wie sich aktuelle Transite verändert haben."
+      }
+    ]
+  },
+  "methodology": {
+    "name": "methodology",
+    "label": "ZUERST BERECHNEN. DANN ERKLÄREN.",
+    "title": "Transparent, wie dein Horoskop entsteht",
+    "description": "Annora Sky trennt deterministische Berechnungen von automatisierter Deutung und hält die aktuelle kostenlose Erfahrung standardmäßig privat.",
+    "items": [
+      {
+        "icon": "RiCompass3Line",
+        "title": "Tropisch · Westlich",
+        "description": "Das Zodiak-System für Zeichen und Planetenstellungen."
+      },
+      {
+        "icon": "RiLayoutLine",
+        "title": "Ganzzeichen-Häuser",
+        "description": "Hausergebnisse erscheinen, wenn eine genaue Geburtszeit vorliegt."
+      },
+      {
+        "icon": "RiTimeLine",
+        "title": "Ort und Zeitzone",
+        "description": "Geburtsort-Koordinaten und historische Ortszeit prägen die Berechnung."
+      },
+      {
+        "icon": "RiLockLine",
+        "title": "Standardmäßig privat",
+        "description": "Gespeicherte Horoskope bleiben in diesem Browser, sofern du nichts anderes wählst."
+      }
+    ]
+  },
+  "faq": {
+    "name": "faq",
+    "label": "FAQ",
+    "title": "Fragen zum Geburtshoroskop berechnen",
+    "description": "Klare Antworten zu Geburtsdaten, Berechnungsmethoden, kostenlosen Funktionen, Datenschutz und den Grenzen der Astrologie.",
+    "buttons": [
+      {
+        "title": "Horoskop erstellen",
+        "url": "/#birth-chart"
+      }
+    ],
+    "items": [
+      {
+        "title": "Was ist ein Geburtshoroskop?",
+        "description": "Ein Geburtshoroskop — auch Radix oder Natalchart genannt — ist eine Karte des Himmels für Datum, Zeit und Ort deiner Geburt. Es zeigt Planetenzeichen, Häuser, Achsen und die Beziehungen zwischen Planeten, die Aspekte genannt werden."
+      },
+      {
+        "title": "Brauche ich meine genaue Geburtszeit?",
+        "description": "Eine genaue Zeit wird dringend empfohlen, weil sie Aszendent und Häuser beeinflusst. Du kannst trotzdem ein Teilergebnis ohne Zeit erkunden — manche Angaben sind dann eingeschränkt."
+      },
+      {
+        "title": "Was ist der Unterschied zwischen Sternzeichen und Geburtshoroskop?",
+        "description": "Dein Sternzeichen ist nur die Position der Sonne bei deiner Geburt. Ein Geburtshoroskop umfasst Mond, Aszendent, alle Planeten, Häuser und Aspekte — und liefert ein deutlich persönlicheres Bild als ein Tageshoroskop."
+      },
+      {
+        "title": "Welches astrologische System nutzt Annora Sky?",
+        "description": "Annora Sky verwendet derzeit tropische westliche Astrologie und Ganzzeichen-Häuser. Planetenpositionen werden mit Astronomy Engine berechnet; die Geburtsort-Zeitzone wandelt die lokale Geburtszeit korrekt um."
+      },
+      {
+        "title": "Ist die Deutung von einem Astrologen geschrieben?",
+        "description": "Nein. Annora Sky ist ein Technologieprodukt. Horoskop-Positionen werden deterministisch berechnet; Deutungstexte entstehen aus dokumentierten astrologischen Regeln und automatisierten Sprachsystemen."
+      },
+      {
+        "title": "Ist das Geburtshoroskop wirklich kostenlos?",
+        "description": "Ja. Die aktuelle kostenlose Erfahrung umfasst das Horoskop-Rad, die Großen Drei, zentrale Planetenstellungen, wichtige Aspekte, Transit-Highlights und in diesem Browser gespeicherte Horoskope."
+      },
+      {
+        "title": "Wie geht Annora Sky mit meinen Geburtsdaten um?",
+        "description": "Der Rechner bereitet dein Horoskop im Browser vor. Gespeicherte Profile bleiben auf diesem Gerät, bis ein zukünftiges Konto-Feature dich ausdrücklich um eine Synchronisation bittet."
+      },
+      {
+        "title": "Kann Astrologie genau vorhersagen, was passiert?",
+        "description": "Nein. Annora Sky versteht Astrologie als reflektierenden Rahmen, nicht als Gewissheit. Sie ersetzt keine professionelle medizinische, rechtliche, finanzielle oder psychotherapeutische Beratung."
+      }
+    ]
+  },
+  "cta": {
+    "name": "final-cta",
+    "title": "Sieh dein Geburtshoroskop in Bewegung",
+    "description": "Gib deine Geburtsdaten einmal ein, erstelle dein Horoskop, speichere es in diesem Browser und komm zurück, wenn sich deine Transite verändern.",
+    "buttons": [
+      {
+        "title": "Mein Horoskop erstellen",
+        "url": "/#birth-chart",
+        "icon": "RiArrowUpLine"
+      }
+    ]
+  },
+  "footer": {
+    "name": "footer",
+    "brand": {
+      "title": "Annora Sky",
+      "description": "Persönliche Astrologie, die dir hilft, dein Geburtshoroskop zu verstehen — und zu sehen, was sich gerade darin bewegt.",
+      "url": "/"
+    },
+    "copyright": "© 2026 Annora Sky. Alle Rechte vorbehalten.",
+    "nav": {
+      "items": [
+        {
+          "title": "Entdecken",
+          "children": [
+            { "title": "Geburtshoroskop", "url": "/#birth-chart" },
+            { "title": "Was du entdeckst", "url": "/#what-your-chart-reveals" },
+            { "title": "In deinem Horoskop", "url": "/#features" },
+            { "title": "Aktuelle Transite", "url": "/#current-transits" },
+            { "title": "Gespeicherte Horoskope", "url": "/saved-charts" }
+          ]
+        },
+        {
+          "title": "Lernen",
+          "children": [
+            { "title": "So funktioniert es", "url": "/#how-to-use" },
+            { "title": "Wie Berechnungen funktionieren", "url": "/#faq" },
+            { "title": "FAQ", "url": "/#faq" },
+            { "title": "Astrologie-Hinweis", "url": "/disclaimer" }
+          ]
+        },
+        {
+          "title": "Unternehmen",
+          "children": [
+            { "title": "Kontakt", "url": "mailto:support@annorasky.com" }
+          ]
+        }
+      ]
+    },
+    "social": { "items": [] },
+    "badges": [],
+    "agreement": {
+      "items": [
+        { "title": "Datenschutz", "url": "/privacy-policy" },
+        { "title": "Nutzungsbedingungen", "url": "/terms-of-service" },
+        { "title": "Hinweis", "url": "/disclaimer" }
+      ]
+    }
+  }
+}

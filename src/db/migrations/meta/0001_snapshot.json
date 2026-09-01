@@ -4,8 +4,8 @@
   "id": "b65e904e-5fd3-4dce-83eb-65e178cb7ccf",
   "prevId": "5e7d4e2b-2246-4c5e-84f9-6e48eb78af5c",
   "tables": {
-    "affiliates_shipfire": {
-      "name": "affiliates_shipfire",
+    "affiliates_annorasky": {
+      "name": "affiliates_annorasky",
       "columns": {
         "id": {
           "name": "id",
@@ -104,8 +104,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "apikeys_shipfire": {
-      "name": "apikeys_shipfire",
+    "apikeys_annorasky": {
+      "name": "apikeys_annorasky",
       "columns": {
         "id": {
           "name": "id",
@@ -151,8 +151,8 @@
         }
       },
       "indexes": {
-        "apikeys_shipfire_api_key_unique": {
-          "name": "apikeys_shipfire_api_key_unique",
+        "apikeys_annorasky_api_key_unique": {
+          "name": "apikeys_annorasky_api_key_unique",
           "columns": [
             "api_key"
           ],
@@ -178,8 +178,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "credits_shipfire": {
-      "name": "credits_shipfire",
+    "credits_annorasky": {
+      "name": "credits_annorasky",
       "columns": {
         "id": {
           "name": "id",
@@ -239,8 +239,8 @@
         }
       },
       "indexes": {
-        "credits_shipfire_trans_no_unique": {
-          "name": "credits_shipfire_trans_no_unique",
+        "credits_annorasky_trans_no_unique": {
+          "name": "credits_annorasky_trans_no_unique",
           "columns": [
             "trans_no"
           ],
@@ -280,8 +280,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "feedbacks_shipfire": {
-      "name": "feedbacks_shipfire",
+    "feedbacks_annorasky": {
+      "name": "feedbacks_annorasky",
       "columns": {
         "id": {
           "name": "id",
@@ -332,8 +332,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "orders_shipfire": {
-      "name": "orders_shipfire",
+    "orders_annorasky": {
+      "name": "orders_annorasky",
       "columns": {
         "id": {
           "name": "id",
@@ -521,8 +521,8 @@
         }
       },
       "indexes": {
-        "orders_shipfire_order_no_unique": {
-          "name": "orders_shipfire_order_no_unique",
+        "orders_annorasky_order_no_unique": {
+          "name": "orders_annorasky_order_no_unique",
           "columns": [
             "order_no"
           ],
@@ -592,8 +592,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "posts_shipfire": {
-      "name": "posts_shipfire",
+    "posts_annorasky": {
+      "name": "posts_annorasky",
       "columns": {
         "id": {
           "name": "id",
@@ -688,8 +688,8 @@
         }
       },
       "indexes": {
-        "posts_shipfire_uuid_unique": {
-          "name": "posts_shipfire_uuid_unique",
+        "posts_annorasky_uuid_unique": {
+          "name": "posts_annorasky_uuid_unique",
           "columns": [
             "uuid"
           ],
@@ -701,8 +701,8 @@
       "uniqueConstraints": {},
       "checkConstraints": {}
     },
-    "users_shipfire": {
-      "name": "users_shipfire",
+    "users_annorasky": {
+      "name": "users_annorasky",
       "columns": {
         "id": {
           "name": "id",
@@ -814,15 +814,15 @@
         }
       },
       "indexes": {
-        "users_shipfire_uuid_unique": {
-          "name": "users_shipfire_uuid_unique",
+        "users_annorasky_uuid_unique": {
+          "name": "users_annorasky_uuid_unique",
           "columns": [
             "uuid"
           ],
           "isUnique": true
         },
-        "email_shipfire_provider_unique_idx": {
-          "name": "email_shipfire_provider_unique_idx",
+        "email_annorasky_provider_unique_idx": {
+          "name": "email_annorasky_provider_unique_idx",
           "columns": [
             "email",
             "signin_provider"
