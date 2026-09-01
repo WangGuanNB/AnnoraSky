@@ -1,11 +1,12 @@
 export function isAuthEnabled(): boolean {
+  if (process.env.NEXT_PUBLIC_AUTH_ENABLED === "false") {
+    return false;
+  }
+
   return (
-    !!(
-      process.env.NEXT_PUBLIC_AUTH_ENABLED === "true" ||
-      process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" ||
-      process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED === "true" ||
-      process.env.NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED === "true"
-    ) && !!(process.env.NEXT_PUBLIC_AUTH_ENABLED !== "false")
+    isGoogleAuthEnabled() ||
+    isGitHubAuthEnabled() ||
+    isGoogleOneTapEnabled()
   );
 }
 

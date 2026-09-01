@@ -24,6 +24,7 @@ import { SiGithub, SiGmail, SiGoogle } from "react-icons/si";
 
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { isGitHubAuthEnabled, isGoogleAuthEnabled } from "@/lib/auth";
 import { signIn } from "next-auth/react";
 import { useAppContext } from "@/contexts/app";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
@@ -90,7 +91,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         {t("sign_modal.email_sign_in")}
       </Button> */}
 
-      {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
+      {isGoogleAuthEnabled() && (
         <Button
           variant="outline"
           className="w-full flex items-center gap-2"
@@ -103,7 +104,7 @@ function ProfileForm({ className }: React.ComponentProps<"form">) {
         </Button>
       )}
 
-      {process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED === "true" && (
+      {isGitHubAuthEnabled() && (
         <Button
           variant="outline"
           className="w-full flex items-center gap-2"

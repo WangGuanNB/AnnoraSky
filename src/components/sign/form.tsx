@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { cn } from "@/lib/utils";
+import { isGitHubAuthEnabled, isGoogleAuthEnabled } from "@/lib/auth";
 import { signIn } from "next-auth/react";
 import { useTranslations } from "next-intl";
 
@@ -36,7 +37,7 @@ export default function SignForm({
         <CardContent>
           <div className="grid gap-6">
             <div className="flex flex-col gap-4">
-              {process.env.NEXT_PUBLIC_AUTH_GOOGLE_ENABLED === "true" && (
+              {isGoogleAuthEnabled() && (
                 <Button
                   variant="outline"
                   className="w-full"
@@ -46,7 +47,7 @@ export default function SignForm({
                   {t("sign_modal.google_sign_in")}
                 </Button>
               )}
-              {process.env.NEXT_PUBLIC_AUTH_GITHUB_ENABLED === "true" && (
+              {isGitHubAuthEnabled() && (
                 <Button
                   variant="outline"
                   className="w-full"

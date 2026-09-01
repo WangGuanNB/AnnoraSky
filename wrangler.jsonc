@@ -43,9 +43,9 @@
     "NEXT_PUBLIC_AUTH_GOOGLE_ID": "35054272068-4fb60pf3a3078qnotlbqo527s9ot8h1o.apps.googleusercontent.com",
     "AUTH_GOOGLE_ID":"35054272068-4fb60pf3a3078qnotlbqo527s9ot8h1o.apps.googleusercontent.com",
     // 是否启用 Google 登录（true/false）
-    "NEXT_PUBLIC_AUTH_GOOGLE_ENABLED": "false",
+    "NEXT_PUBLIC_AUTH_GOOGLE_ENABLED": "true",
     // 是否启用 Google One Tap 登录（true/false）
-    "NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED": "false",
+    "NEXT_PUBLIC_AUTH_GOOGLE_ONE_TAP_ENABLED": "true",
 
     // ========== 4. GitHub 登录配置 ==========
     // 是否启用 GitHub 登录（true/false）
@@ -54,7 +54,7 @@
     // ========== 5. 支付配置 ==========
 
      // 定价页 monthly,yearly,one-time（全显示）| monthly,yearly（只月+年）| one-time（仅一次性）
-     "NEXT_PUBLIC_PRICING_VISIBLE_TABS": "monthly,yearly",
+     "NEXT_PUBLIC_PRICING_VISIBLE_TABS": "monthly,yearly,one-time",
 
     
     // 支付方式开关（优先级: Stripe > PayPal > Creem，至少启用一个）
@@ -76,24 +76,24 @@
 
     // ========== 6. Creem 支付配置 ==========
     // 支付方式开关（优先级: Stripe > PayPal > Creem，至少启用一个）
-    "NEXT_PUBLIC_PAYMENT_CREEM_ENABLED": "false",
+    "NEXT_PUBLIC_PAYMENT_CREEM_ENABLED": "true",
     // Creem 测试模式（true=测试环境，false=生产环境）
-    "CREEM_TEST_MODE": "false",
+    "CREEM_TEST_MODE": "true",
     // Creem API 地址（可选，默认: https://api.creem.io）
     "CREEM_API_URL": "https://api.creem.io",
     // Creem 产品 ID（6 套餐，从 Creem Dashboard 创建产品后获取 prod_xxx）
     //  ---- 月订阅：Starter / Standard / Premium ----
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STARTER_MONTHLY": "",
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STANDARD_MONTHLY": "",
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_PREMIUM_MONTHLY": "",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STARTER_MONTHLY": "prod_1LXdXxSyRyUB0wAEctaixp",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STANDARD_MONTHLY": "prod_6VYZJU7R1l9DlT3g6vduuF",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_PREMIUM_MONTHLY": "prod_2WcXEPQKzsGK16yWBuFN71",
     // ---- 年订阅：Starter / Standard / Premium ----
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STARTER_YEARLY": "",
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STANDARD_YEARLY": "",
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_PREMIUM_YEARLY": "",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STARTER_YEARLY": "prod_2uN3KJeOyGN5Hw7J1YV6A8",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STANDARD_YEARLY": "prod_1JCIlQHaHA5GwHvaOZIC51",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_PREMIUM_YEARLY": "prod_4DNSPn2ZJmwDPinYvyGt9M",
     // ---- 一次性：从 Creem Dashboard 创建产品后填入 prod_xxx ----
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STARTER_ONETIME": "",
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STANDARD_ONETIME": "",
-    "NEXT_PUBLIC_CREEM_PRODUCT_ID_PREMIUM_ONETIME": "",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STARTER_ONETIME": "prod_11U4DF2cTSKFcJ3KUCNlc0",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_STANDARD_ONETIME": "prod_18IioiMQOeBs86mYQPjgJ7",
+    "NEXT_PUBLIC_CREEM_PRODUCT_ID_PREMIUM_ONETIME": "prod_2LnE64WgbtrzxqavtIj0nQ",
 
 
     // ========== 7. 积分系统配置 ==========
@@ -124,7 +124,7 @@
     // R2 存储桶名称
     "R2_BUCKET_NAME": "fire-ship",
     // R2 公开访问 URL
-    "R2_PUBLIC_URL": "",
+    "R2_PUBLIC_URL": "https://cdn.shipstart.net",
 
     // ========== 11. AI 图像生成配置（多 provider 容错机制）==========
     // 主力 Provider（可选：kie, fal, replicate）
@@ -145,6 +145,7 @@
     // ========== 13. 分析统计配置 ==========
     // Google Analytics ID
     "NEXT_PUBLIC_GOOGLE_ANALYTICS_ID": "G-JHX7BPQFMP",
+    "NEXT_PUBLIC_CLARITY_PROJECT_ID": "uszgvk3lyr",
     // OpenPanel Client ID
     "NEXT_PUBLIC_OPENPANEL_CLIENT_ID": "",
     // Plausible 域名
@@ -154,7 +155,7 @@
 
     // ========== 14. 广告配置 ==========
     // Google AdSense 广告代码
-    "NEXT_PUBLIC_GOOGLE_ADCODE": "",
+    "NEXT_PUBLIC_GOOGLE_ADCODE": "ca-pub-1740791303497483",
 
     // ========== 15. 社交媒体和联系方式配置 ==========
     // Twitter/X 社交账号
@@ -167,13 +168,12 @@
 
   // ========================================
   // D1 数据库绑定
-  // 创建数据库：pnpm wrangler d1 create shipfire-db
-  // 将输出的 database_id 填入下方
+  // 创建数据库：pnpm wrangler d1 create annorasky
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "shipfire-db",
-      "database_id": "ad72dedb-9c09-44ea-8798-f202789c9103"
+      "database_name": "annorasky",
+      "database_id": "cc6c0b88-737c-478a-82a6-b79ee86fbbed"
     }
   ]
 }
