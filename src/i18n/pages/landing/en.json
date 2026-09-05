@@ -462,7 +462,87 @@
       ]
     },
     "social": { "items": [] },
-    "badges": [],
+    "badges": [
+      {
+        "title": "MossAI Tools",
+        "url": "https://mossai.org",
+        "target": "_blank"
+      },
+      {
+        "title": "Featured on Findly.tools",
+        "url": "https://findly.tools/annorasky?utm_source=annorasky",
+        "target": "_blank",
+        "image": {
+          "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
+          "alt": "Featured on Findly.tools",
+          "width": 175,
+          "height": 55
+        }
+      },
+      {
+        "title": "Listed on Turbo0",
+        "url": "https://turbo0.com/item/annora-sky",
+        "target": "_blank",
+        "image": {
+          "src": "https://img.turbo0.com/badge-listed-light.svg",
+          "alt": "Listed on Turbo0",
+          "height": 54
+        }
+      },
+      {
+        "title": "Featured on Xinquji.com",
+        "url": "https://xinquji.com",
+        "target": "_blank",
+        "image": {
+          "src": "https://xinquji.com/badge?lang=en",
+          "alt": "Featured on Xinquji.com",
+          "width": 200,
+          "height": 54
+        }
+      },
+      {
+        "title": "NavFolders",
+        "url": "https://navfolders.com",
+        "target": "_blank",
+        "image": {
+          "src": "https://navfolders.com/badge/nav_light.svg",
+          "alt": "NavFolders",
+          "width": 200,
+          "height": 54
+        }
+      },
+      {
+        "title": "Featured on toolfame.com",
+        "url": "https://toolfame.com/item/annora-sky",
+        "target": "_blank",
+        "image": {
+          "src": "https://toolfame.com/badge-light.svg",
+          "alt": "Featured on toolfame.com",
+          "height": 54
+        }
+      },
+      {
+        "title": "Featured on LaunchVault",
+        "url": "https://www.launchvault.dev",
+        "target": "_blank",
+        "image": {
+          "src": "https://www.launchvault.dev/images/badges/launch-valut-badge.svg",
+          "alt": "Featured on LaunchVault",
+          "width": 195
+        }
+      },
+      {
+        "title": "Powered by Startup Fast",
+        "url": "https://startupfa.st",
+        "target": "_blank",
+        "image": {
+          "src": "https://startupfa.st/images/badges/powered-by-light.svg",
+          "alt": "Powered by Startup Fast",
+          "width": 150,
+          "height": 44
+        }
+      }
+    ],
     "agreement": {
       "items": [
         { "title": "Privacy Policy", "url": "/privacy-policy" },

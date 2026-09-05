@@ -4,7 +4,7 @@ export interface Badge {
   title: string;
   url: string;
   target?: string;
-  image: Image;
+  image?: Image; // optional: text-only reciprocal links when image is omitted
 }
 
 export interface Footer {

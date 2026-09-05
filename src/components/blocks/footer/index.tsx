@@ -74,9 +74,9 @@ export default function Footer({ footer }: { footer: FooterType }) {
                 </p>
               )}
               
-              {/* 新的badges数组（英文版本使用） */}
+              {/* badges 数组（支持图片徽章或纯文字外链） */}
               {footer.badges && footer.badges.length > 0 && (
-                <div className="flex items-center gap-3 opacity-60 hover:opacity-80 transition-opacity">
+                <div className="flex flex-wrap items-center justify-center gap-3 opacity-60 hover:opacity-80 transition-opacity lg:justify-start">
                   {footer.badges.map((badge, i) => (
                     <a
                       key={i}
@@ -84,21 +84,25 @@ export default function Footer({ footer }: { footer: FooterType }) {
                       target={badge.target || "_blank"}
                       rel="noopener noreferrer"
                       title={badge.title}
-                      className="inline-block hover:opacity-90 transition-opacity"
+                      className="inline-block hover:opacity-90 transition-opacity hover:text-primary"
                     >
-                      <img
-                        src={badge.image.src}
-                        alt={badge.image.alt || badge.title}
-                        width={Math.round((badge.image.width || 171) * 0.8)} 
-                        height={Math.round((badge.image.height || 54) * 0.8)}
-                        className="h-auto max-h-10"
-                      />
+                      {badge.image?.src ? (
+                        <img
+                          src={badge.image.src}
+                          alt={badge.image.alt || badge.title}
+                          width={Math.round((badge.image.width || 171) * 0.8)}
+                          height={Math.round((badge.image.height || 54) * 0.8)}
+                          className="h-auto max-h-10"
+                        />
+                      ) : (
+                        badge.title
+                      )}
                     </a>
                   ))}
                 </div>
               )}
-              
-              {/* 旧的单个badge字段（其他语言版本使用） */}
+
+              {/* 旧的单个 badge 字段（向后兼容） */}
               {!footer.badges && footer.badge && (
                 <div className="flex items-center gap-3 opacity-60 hover:opacity-80 transition-opacity">
                   <a
@@ -106,15 +110,19 @@ export default function Footer({ footer }: { footer: FooterType }) {
                     target={footer.badge.target || "_blank"}
                     rel="noopener noreferrer"
                     title={footer.badge.title}
-                    className="inline-block hover:opacity-90 transition-opacity"
+                    className="inline-block hover:opacity-90 transition-opacity hover:text-primary"
                   >
-                    <img
-                      src={footer.badge.image.src}
-                      alt={footer.badge.image.alt || footer.badge.title}
-                      width={Math.round((footer.badge.image.width || 200) * 0.8)} 
-                      height={Math.round((footer.badge.image.height || 54) * 0.8)}
-                      className="h-auto max-h-10"
-                    />
+                    {footer.badge.image?.src ? (
+                      <img
+                        src={footer.badge.image.src}
+                        alt={footer.badge.image.alt || footer.badge.title}
+                        width={Math.round((footer.badge.image.width || 200) * 0.8)}
+                        height={Math.round((footer.badge.image.height || 54) * 0.8)}
+                        className="h-auto max-h-10"
+                      />
+                    ) : (
+                      footer.badge.title
+                    )}
                   </a>
                 </div>
               )}
