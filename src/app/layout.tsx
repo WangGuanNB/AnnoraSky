@@ -53,7 +53,7 @@ export default async function RootLayout({
           {`
             (function(){
               try{
-                var allowNoFollowHosts = [];
+                var allowNoFollowHosts = ["turbo0.com", "www.turbo0.com", "img.turbo0.com"];
                 var anchors = document.querySelectorAll('a[href^="http"], a[target="_blank"]');
                 anchors.forEach(function(a){
                   var isExternal = a.host && a.host !== window.location.host;
