@@ -2,7 +2,10 @@
   "template": "annora-sky",
   "theme": "light",
   "header": {
-    "brand": { "title": "Annora Sky", "url": "/" },
+    "brand": {
+      "title": "Annora Sky",
+      "url": "/"
+    },
     "nav": {
       "items": [
         {
@@ -109,7 +112,11 @@
     },
     "title": "Free Birth Chart Calculator",
     "description": "Create your natal chart from your birth date, time, and place. Start with your Sun, Moon, and Rising, then see how today's sky connects with your chart.",
-    "metrics": ["Western Tropical", "No signup", "Saved in this browser"]
+    "metrics": [
+      "Western Tropical",
+      "No signup",
+      "Saved in this browser"
+    ]
   },
   "introduce": {
     "name": "what-your-chart-reveals",
@@ -437,31 +444,63 @@
         {
           "title": "Explore",
           "children": [
-            { "title": "Birth Chart", "url": "/#birth-chart" },
-            { "title": "What You'll Discover", "url": "/#what-your-chart-reveals" },
-            { "title": "Inside Your Chart", "url": "/#features" },
-            { "title": "Current Transits", "url": "/#current-transits" },
-            { "title": "Saved Charts", "url": "/saved-charts" }
+            {
+              "title": "Birth Chart",
+              "url": "/#birth-chart"
+            },
+            {
+              "title": "What You'll Discover",
+              "url": "/#what-your-chart-reveals"
+            },
+            {
+              "title": "Inside Your Chart",
+              "url": "/#features"
+            },
+            {
+              "title": "Current Transits",
+              "url": "/#current-transits"
+            },
+            {
+              "title": "Saved Charts",
+              "url": "/saved-charts"
+            }
           ]
         },
         {
           "title": "Learn",
           "children": [
-            { "title": "How to use", "url": "/#how-to-use" },
-            { "title": "How calculations work", "url": "/#faq" },
-            { "title": "FAQ", "url": "/#faq" },
-            { "title": "Astrology Disclaimer", "url": "/disclaimer" }
+            {
+              "title": "How to use",
+              "url": "/#how-to-use"
+            },
+            {
+              "title": "How calculations work",
+              "url": "/#faq"
+            },
+            {
+              "title": "FAQ",
+              "url": "/#faq"
+            },
+            {
+              "title": "Astrology Disclaimer",
+              "url": "/disclaimer"
+            }
           ]
         },
         {
           "title": "Company",
           "children": [
-            { "title": "Contact", "url": "mailto:support@annorasky.com" }
+            {
+              "title": "Contact",
+              "url": "mailto:support@annorasky.com"
+            }
           ]
         }
       ]
     },
-    "social": { "items": [] },
+    "social": {
+      "items": []
+    },
     "badges": [
       {
         "title": "MossAI Tools",
@@ -471,83 +510,59 @@
       {
         "title": "Featured on Findly.tools",
         "url": "https://findly.tools/annorasky?utm_source=annorasky",
-        "target": "_blank",
-        "image": {
-          "src": "https://findly.tools/badges/findly-tools-badge-light.svg",
-          "alt": "Featured on Findly.tools",
-          "width": 175,
-          "height": 55
-        }
+        "target": "_blank"
       },
       {
         "title": "Listed on Turbo0",
         "url": "https://turbo0.com/item/annora-sky",
         "target": "_blank",
-        "image": {
-          "src": "https://img.turbo0.com/badge-listed-light.svg",
-          "alt": "Listed on Turbo0",
-          "height": 54
-        }
+        "dofollow": true
       },
       {
         "title": "Featured on Xinquji.com",
         "url": "https://xinquji.com",
-        "target": "_blank",
-        "image": {
-          "src": "https://xinquji.com/badge?lang=en",
-          "alt": "Featured on Xinquji.com",
-          "width": 200,
-          "height": 54
-        }
+        "target": "_blank"
       },
       {
         "title": "NavFolders",
         "url": "https://navfolders.com",
-        "target": "_blank",
-        "image": {
-          "src": "https://navfolders.com/badge/nav_light.svg",
-          "alt": "NavFolders",
-          "width": 200,
-          "height": 54
-        }
+        "target": "_blank"
       },
       {
         "title": "Featured on toolfame.com",
         "url": "https://toolfame.com/item/annora-sky",
-        "target": "_blank",
-        "image": {
-          "src": "https://toolfame.com/badge-light.svg",
-          "alt": "Featured on toolfame.com",
-          "height": 54
-        }
+        "target": "_blank"
       },
       {
         "title": "Featured on LaunchVault",
         "url": "https://www.launchvault.dev",
-        "target": "_blank",
-        "image": {
-          "src": "https://www.launchvault.dev/images/badges/launch-valut-badge.svg",
-          "alt": "Featured on LaunchVault",
-          "width": 195
-        }
+        "target": "_blank"
       },
       {
         "title": "Powered by Startup Fast",
         "url": "https://startupfa.st",
-        "target": "_blank",
-        "image": {
-          "src": "https://startupfa.st/images/badges/powered-by-light.svg",
-          "alt": "Powered by Startup Fast",
-          "width": 150,
-          "height": 44
-        }
+        "target": "_blank"
+      },
+      {
+        "title": "My AI Video Maker",
+        "url": "https://myaivideomaker.com/",
+        "target": "_blank"
       }
     ],
     "agreement": {
       "items": [
-        { "title": "Privacy Policy", "url": "/privacy-policy" },
-        { "title": "Terms of Service", "url": "/terms-of-service" },
-        { "title": "Disclaimer", "url": "/disclaimer" }
+        {
+          "title": "Privacy Policy",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terms of Service",
+          "url": "/terms-of-service"
+        },
+        {
+          "title": "Disclaimer",
+          "url": "/disclaimer"
+        }
       ]
     }
   }
